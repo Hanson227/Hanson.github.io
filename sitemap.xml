@@ -2,73 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:2219/posts/tech/</loc>
+    <loc>https://hanson-study.netlify.app/posts/tech/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/</loc>
+    <loc>https://hanson-study.netlify.app/posts/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/categories/</loc>
+    <loc>https://hanson-study.netlify.app/categories/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/</loc>
+    <loc>https://hanson-study.netlify.app/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/redis/</loc>
+    <loc>https://hanson-study.netlify.app/tags/redis/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/categories/redis/</loc>
+    <loc>https://hanson-study.netlify.app/categories/redis/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/tech/tech1/</loc>
+    <loc>https://hanson-study.netlify.app/posts/tech/tech1/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/tech/</loc>
+    <loc>https://hanson-study.netlify.app/tags/tech/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/</loc>
+    <loc>https://hanson-study.netlify.app/tags/</loc>
     <lastmod>2022-11-30T15:55:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/blog/</loc>
+    <loc>https://hanson-study.netlify.app/tags/blog/</loc>
     <lastmod>2022-05-05T00:18:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/blog/blog/</loc>
+    <loc>https://hanson-study.netlify.app/posts/blog/blog/</loc>
     <lastmod>2022-05-05T00:18:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/blog/</loc>
+    <loc>https://hanson-study.netlify.app/posts/blog/</loc>
     <lastmod>2022-05-05T00:18:23+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/life/</loc>
+    <loc>https://hanson-study.netlify.app/tags/life/</loc>
     <lastmod>2022-05-05T00:18:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/life/life/</loc>
+    <loc>https://hanson-study.netlify.app/posts/life/life/</loc>
     <lastmod>2022-05-05T00:18:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/life/</loc>
+    <loc>https://hanson-study.netlify.app/posts/life/</loc>
     <lastmod>2022-05-05T00:18:15+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/read/</loc>
+    <loc>https://hanson-study.netlify.app/posts/read/</loc>
     <lastmod>2022-05-05T00:18:06+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/tags/read/</loc>
+    <loc>https://hanson-study.netlify.app/tags/read/</loc>
     <lastmod>2022-05-05T00:18:06+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/read/read/</loc>
+    <loc>https://hanson-study.netlify.app/posts/read/read/</loc>
     <lastmod>2022-05-05T00:18:06+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/posts/tech/tech/</loc>
+    <loc>https://hanson-study.netlify.app/posts/tech/tech/</loc>
     <lastmod>2022-05-05T00:17:58+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/links/</loc>
+    <loc>https://hanson-study.netlify.app/links/</loc>
     <lastmod>2021-11-06T15:15:53+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/about/</loc>
+    <loc>https://hanson-study.netlify.app/about/</loc>
     <lastmod>2021-11-06T14:57:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:2219/archives/</loc>
+    <loc>https://hanson-study.netlify.app/archives/</loc>
   </url><url>
-    <loc>http://localhost:2219/search/</loc>
+    <loc>https://hanson-study.netlify.app/search/</loc>
   </url><url>
-    <loc>http://localhost:2219/series/</loc>
+    <loc>https://hanson-study.netlify.app/series/</loc>
   </url>
 </urlset>
