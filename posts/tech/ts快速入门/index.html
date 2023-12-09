@@ -214,11 +214,6 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
-                <a href="https://hanson-study.netlify.app/posts" title="📚 文章">
-                <span>📚 文章</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://hanson-study.netlify.app/tags" title="🧩 标签">
                 <span>🧩 标签</span>
                 </a>
@@ -555,7 +550,7 @@ var _hmt = _hmt || [];
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">arrowFun</span> <span style="color:#f92672">=</span> ( [<span style="color:#a6e22e">param1</span>, <span style="color:#a6e22e">parma2</span>,<span style="color:#960050;background-color:#1e0010">…</span><span style="color:#a6e22e">param</span> <span style="color:#a6e22e">n</span>] )<span style="color:#f92672">=&gt;</span> {    <span style="color:#75715e">// 代码块}
 </span></span></span></code></pre></div><p>如何要主动调用这个箭头函数，可以按如下方法去调用：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">arrowFun</span>(<span style="color:#a6e22e">param1</span>, <span style="color:#a6e22e">parma2</span>,<span style="color:#960050;background-color:#1e0010">…</span><span style="color:#a6e22e">param</span> <span style="color:#a6e22e">n</span>)
-</span></span></code></pre></div><p><img loading="lazy" src="D:%5cHuawei_Environments%5c%e7%ac%94%e8%ae%b0.assets%5cimage-20231111221520453.png" alt="image-20231111221520453"  />
+</span></span></code></pre></div><p><img loading="lazy" src="1.png" alt=""  />
 </p>
 <p>后面，我们在学习HarmonyOS应用开发时会经常用到箭头函数。例如，给一个按钮添加点击事件，其中onClick事件中的函数就是箭头函数。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">Button</span>(<span style="color:#e6db74">&#34;Click Now&#34;</span>)  .<span style="color:#a6e22e">onClick</span>(() <span style="color:#f92672">=&gt;</span> {    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Button is click&#34;</span>)  })
@@ -623,33 +618,6 @@ var _hmt = _hmt || [];
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">list</span>) {    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// &#34;4&#34;, &#34;5&#34;, &#34;6&#34;}
 </span></span></span></code></pre></div>
 
-        </div>
-        <div class="post-reward">
-            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
-                <div id="QR" style="opacity: 0;">
-                    <div id="wechat" style="display: inline-block">
-                        <a class="fancybox" rel="group">
-                            <img id="wechat_qr" src="https://hanson-study.netlify.app/img/wechat_pay.png" alt="wechat_pay"></a>
-                        <p>微信</p>
-                    </div>
-                    <div id="alipay" style="display: inline-block">
-                        <a class="fancybox" rel="group">
-                            <img id="alipay_qr" src="https://hanson-study.netlify.app/img/alipay.png" alt="alipay"></a>
-                        <p>支付宝</p>
-                    </div>
-                </div>
-                <button id="rewardButton"
-                        onclick="
-                    var qr = document.getElementById('QR');
-                    if (qr.style.opacity === '0') {
-                        qr.style.opacity='1';
-                    } else {
-                        qr.style.opacity='0'
-                    }"
-                >
-                    <span>🧧 鼓励</span>
-                </button>
-            </div>
         </div>
 
         <footer class="post-footer">
