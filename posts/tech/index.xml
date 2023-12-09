@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>Tech</title>
+      <title></title>
       <link>https://hanson-study.netlify.app/posts/tech/tech/</link>
-      <pubDate>Thu, 05 May 2022 00:17:58 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hanson-study.netlify.app/posts/tech/tech/</guid>
-      <description>科技代码</description>
+      <description>title: &amp;ldquo;Tech&amp;rdquo; date: 2022-05-05T00:17:58+08:00 lastmod: 2022-05-05T00:17:58+08:00 author: [&amp;ldquo;Sulv&amp;rdquo;] keywords: categories: tags: tech description: &amp;ldquo;科技代码&amp;rdquo; weight: slug: &amp;quot;&amp;quot; draft: false # 是否为草稿 comments: true reward: true # 打赏 mermaid: true #是否开启mermaid showToc: true # 显示目录 TocOpen: true # 自动展开目录 hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等 disableShare: true # 底部不显示分享栏 showbreadcrumbs: true #顶部显示路径 cover: image: posts/tech/123/123.png caption: &amp;quot;&amp;quot; #图片底部描述 alt: &amp;quot;&amp;quot; relative: false &amp;lt;div&amp;gt; 科</description>
     </item>
     
   </channel>
