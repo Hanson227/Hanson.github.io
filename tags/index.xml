@@ -5,21 +5,12 @@
     <link>https://hanson-study.netlify.app/tags/</link>
     <description>Recent content in 🧩 标签 on Hanson&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en</language>
     <lastBuildDate>Sun, 10 Dec 2023 23:46:59 +0800</lastBuildDate><atom:link href="https://hanson-study.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>好文存档</title>
-      <link>https://hanson-study.netlify.app/tags/%E5%A5%BD%E6%96%87%E5%AD%98%E6%A1%A3/</link>
-      <pubDate>Sun, 10 Dec 2023 23:46:59 +0800</pubDate>
-      
-      <guid>https://hanson-study.netlify.app/tags/%E5%A5%BD%E6%96%87%E5%AD%98%E6%A1%A3/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>存档</title>
       <link>https://hanson-study.netlify.app/tags/%E5%AD%98%E6%A1%A3/</link>
-      <pubDate>Sat, 09 Dec 2023 21:30:47 +0800</pubDate>
+      <pubDate>Sun, 10 Dec 2023 23:46:59 +0800</pubDate>
       
       <guid>https://hanson-study.netlify.app/tags/%E5%AD%98%E6%A1%A3/</guid>
       <description></description>
@@ -28,14 +19,23 @@
     <item>
       <title>好文</title>
       <link>https://hanson-study.netlify.app/tags/%E5%A5%BD%E6%96%87/</link>
-      <pubDate>Sat, 09 Dec 2023 21:30:47 +0800</pubDate>
+      <pubDate>Sun, 10 Dec 2023 23:46:59 +0800</pubDate>
       
       <guid>https://hanson-study.netlify.app/tags/%E5%A5%BD%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>TS</title>
+      <title>ArkTS</title>
+      <link>https://hanson-study.netlify.app/tags/arkts/</link>
+      <pubDate>Sat, 09 Dec 2023 17:52:33 +0800</pubDate>
+      
+      <guid>https://hanson-study.netlify.app/tags/arkts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ts</title>
       <link>https://hanson-study.netlify.app/tags/ts/</link>
       <pubDate>Sat, 09 Dec 2023 17:52:33 +0800</pubDate>
       
