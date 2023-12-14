@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Html&#43;css实战笔记 | Hanson&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="前端html&#43;css学习笔记">
+<meta name="author" content="郑文玲">
+<link rel="canonical" href="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="apple-touch-icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="mask-icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta property="og:title" content="Html&#43;css实战笔记" />
+<meta property="og:description" content="前端html&#43;css学习笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-14T15:14:57+08:00" />
+<meta property="article:modified_time" content="2023-12-14T15:14:57+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Html&#43;css实战笔记"/>
+<meta name="twitter:description" content="前端html&#43;css学习笔记"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://hanson-study.netlify.app/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "👨🏻‍💻 技术",
+          "item": "https://hanson-study.netlify.app/posts/tech/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Html+css实战笔记",
+      "item": "https://hanson-study.netlify.app/posts/tech/html+css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Html+css实战笔记",
+  "name": "Html\u002bcss实战笔记",
+  "description": "前端html+css学习笔记",
+  "keywords": [
+    ""
+  ],
+  "articleBody": "一、html实战笔记 1、MDN前端神书 (html和css都有，各种各样的) 直接百度官方搜索，有文档\n2、Tailwind CSS 3、Bootstrap 4、W3school 5、easyicon（javaSwing那块知道的） 2、三大标签元素以及setion标签的了解 /* 转换成块元素，才可设置高度 */\ndisplay: block;\n很多人经常会把块元素、行内块元素、行内元素的知识混淆掉，今天我归纳下，做个小结：\n1、块元素独占一行，而行内块元素和行内元素可以和别人共处一行；\n2、常见的块元素有div、p、h1、ol、ul、dl、tabel、form；\n3、常见的行内元素有a、span、i、strong、em、label、cite、code；\n4、常见的行内块元素有img、input、select、textarea、button；\n5、行内块元素的特性和块元素完全一样，除了一点：它不独占一行；\n6、块元素、行内块、行内元素都有各自的盒模型。三者的盒模型有相同的地方，也有不同的地方；\n7、行内元素不能设置“width”和“height”，块元素和行内块元素可以设置“width”和“height”；\n8、行内元素在水平方向上的padding、border、margin的特性和块元素一模一样；\n9、行内元素在垂直方向上的padding、border、margin的特性和块元素很不一样：padding和border可以设置，但是不参与布局；margin设置都不能设置；\n10、行内元素不能包含块元素，除了a元素； 11、行内元素可以包含别的行内元素；\n12、行内元素脱离文档流后，会变成块元素；\n13、可以给行内元素设置背景图片（“background-image”）；\n14、块元素的宽默认是父元素宽的100%，高由内容撑起来；\n15、行内元素的宽和高都由内容撑起来；\n16、其实块元素、行内块元素、行内元素之间可以互换，只需要给display属性赋不同的值（block、inline-block、inline）就可以了。\n3、html5自定义标签名 这说明，浏览器对待自定义元素，就像对待标准元素一样，只是没有默认的样式和行为。这种处理方式是写入 HTML5 标准的。\n“自定义元素的名字必须包含一个破折号（-）\n所以、和都是正确的名字\n而和是不正确的。这样的限制使得 HTML 解析器可以分辨那些是标准元素，哪些是自定义元素。”\n4、header标签 这个标签里面必须包含一个h1之类的标题标签\n响应式布局、自适应布局 bookstrap响应式框架的网站：页面窗口拉大拉小显示页面内容的其中一些\n在不同情况下rem是有一个缩放功能\n宽度和高度都不要写死\npx写死\nrem写活 %写活\n设备的划分情况为：\n小于768的为超小屏幕（手机）\n768~992之间的为小屏设备（平板）\n992~1200的中等屏幕（桌面显示器）\n大于1200的宽屏设备（大桌面显示器）\n实现网页自适应不同尺寸 屏幕（PC端） 其中1920就是UI设计稿提供的宽度，这样就算是屏幕不是1920也可以根据比例放大缩小，实现百分百还原设计稿。\n​ 对应的css样式中 1rem=100px; 根据设计稿效果还原即可\n基于等比缩放的大屏自适应方案 html页面如何不同设备自适应缩放比例 width=device-width ：表示宽度是设备屏幕的宽度 height=device-height ：表示宽度是设备屏幕的宽度 initial-scale=1.0：表示初始的缩放比例(初始规模为1.0倍，即原始大小) minimum-scale=0.5：表示最小的缩放比例 maximum-scale=2.0：表示最大的缩放比例 user-scalable=yes或者1：表示用户是否可以调整缩放比例(no或者0：表示不可调整缩放比例) target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。\nUI设计稿和电脑屏幕尺寸不同 前端页面在PC端不同分辨率屏幕的适配—-比例缩放\n通常UI提供PC端项目的设计稿尺寸都是1920*1080(16:9)的，但是电脑显示屏的分辨率是不固定的，所以按照这个固定像素做出来的前端页面在不同的显示屏上可能会出现页面显示不全或者是页面无法充满屏幕的情况。此时，“人美心善”的客户就会提出要求，要让页面充满屏幕。\n作者：罖卋罖 链接：https://juejin.cn/post/7083702725690523685 来源：稀土掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n【马面案例】 后面学到vue会有更多的适配方案\n初始化CSS样式 各种基本网页都会有的\n如何让小盒子在大盒子中垂直和水平居中 只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可 在小盒子样式中写{ height: line-height: } 页面布局及设备适配【千锋教育】 （不管分配率怎么变，布局都不会乱是不是）\n100%布局（弹性布局）：不管分辨率怎么改变，位置都不会变，屏幕大间距也大文字大小也变化，会比例失调\n“拉勾”案例\nrem布局（等比例缩放布局）：\n“网易”案例\nrem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位 html { font-size: 16px; } 如果需要动态的对html的字体进行改变，就需要通过js进行操作 web端单位：px是写死的单位大小\n移动端单位：是比例\n通过vm实现移动端页面实战布局\n拉勾网实战 PC端转化成手机端\n如何获取设计稿\n点击上图两个，这是就可以直接下载设计稿了，用PS是打开\nPC端转移动端问题\n不可以双击放大了\n关闭ul自带的小圆点、取消列表项的样式\n关闭img自带的边框、取消图片下边的留白\na标签的下划线给取消掉\n取消input标签的外边线\n再添加上窗口自适应\n同时让body容器去触发弹性盒子，触发弹性盒子之后修改主轴方向就好了\n利用弹性盒子内容完成布局就可以\n1、设计稿出自于哪个屏幕 用PS测量得得到宽度为1920px（像素）就知道出自于哪个屏幕了，就可以得到设备像素比必然是巴拉，也就是dpr=巴拉\n2、头部导航 也就相当于，从设计稿里每次测量的物理像素都需要把dpr除掉\n【在这开始，之后的所有盒子大小尺寸都要设置成 物理像素/dpr （px）】\n但是你给了一个固定的宽度，让宽度自适应，始终占屏幕的一整行（这里的宽度可以注释掉）\n设置文本水平居中对齐 text-align:center，然后设置height和line-height高度一样\n触发弹性盒子display:flex，再设置里面的两个小盒子两端贴边对齐 justify-content:space-between;，想让左边和右边都有间距，设置大盒子的内边距padding:0px 17px;（上下、左右），再让文本垂直居中对齐（设置height和line-height高度一样）\n找到大盒子(nav)中的第一个小盒子(span)\nnav\u003espan:nth-child(1){巴拉巴拉样式}\n3、主体区域布局 让大盒子中的几个小盒子在一行内显示 display:flex;\n占剩余宽度或者剩余高度的所有用 flex:1;\n4、尾部区域 打底裤实战（rem布局） 1、认识一些单位 屏幕切换成横屏，vmin在最小值的那一个方向作为参照物，所以在这里屏幕切换时，红条的高度不变\n2、开始布局 3、导航区域 主轴上对齐，两端环绕，还有flex:1;实现\n接下来用两端对齐完成\n4、主体区域 flex-wrap:wrap 一行放不下了，必要时可以自动换行 5、flexble.js布局 PC端页面如何适配不同屏幕大小 PC端页面适应不同分辨率\n（1）如何进行PC端多屏适配 （2）多屏适配的几种方法： 使用媒体查询，如 bootstrap等框架 制作设计图的时候，给一个固定的宽度，如1200，背景使用纯色，或者大背景图 使用rem 其他 这里介绍一下 rem 适配方案：\n能够流畅的适配不同分辨率的屏幕，并且开发效率跟使用px开发没什么区别，只是多了将px转化成rem的css函数\n效果图如下（可以看到在不同的分辨率下，依然可以保持较好的布局）：\n（3）使用上述方案的步骤： 1、根据设计稿算出 px转化成rem 的缩放比（这里我的设计稿是 1920px，然后上面导航栏的字体大小为34px，所以都以这个为基准，算出缩放比为 56.47，然后反过来除就等于导航栏字体大小，其他的图片、文字、div都按照这个去算，不懂得自己动手敲一遍，然后使用px的地方用这个函数代替就好了，这里使用的是 scss）\n$ratio: 1920 / 56.47; // 缩放比 34 // 返回对应屏幕下的rem值 @function px2rem($px){ @return $px / $ratio + rem } 2、样式\n样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）： .title { position: absolute; top: px2rem(70); color: $title-color; font-size: $font-size-title; } 3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化\n\u003cscript\u003e // 获取当前设备的宽度，设置rem的根字体大小 let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width const htmlObj = document.getElementsByTagName('html')[0] htmlObj.style.fontSize = width / 56.47 + 'px' // 对resize事件进行浏览器兼容处理 if(document.createEvent) { var event = document.createEvent(\"HTMLEvents\"); event.initEvent(\"resize\", true, true); window.dispatchEvent(event); } else if(document.createEventObject) { window.fireEvent(\"onresize\"); } // 监听页面resize事件，重新设置rem的根字体大小 window.onresize = function() { let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width htmlObj.style.fontSize = width / 56.47 + 'px' }; \u003c/script\u003e flexible代码 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003ctitle\u003e版心布局\u003c/title\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no\"\u003e \u003cscript\u003e (function flexible(window, document) { var docEl = document.documentElement; var dpr = window.devicePixelRatio || 1; function setBodyFontSize() { if (document.body) { document.body.style.fontSize = 12 * dpr + \"px\"; } else { document.addEventListener(\"DOMContentLoaded\", setBodyFontSize); } } setBodyFontSize(); function setRemUnit() { var rem = docEl.clientWidth / 10; docEl.style.fontSize = rem + \"px\"; } setRemUnit(); window.addEventListener(\"resize\", setRemUnit); window.addEventListener(\"pageshow\", function (e) { if (e.persisted) { setRemUnit(); } }); if (dpr \u003e= 2) { var fakeBody = document.createElement(\"body\"); var testElement = document.createElement(\"div\"); testElement.style.border = \".5px solid transparent\"; fakeBody.appendChild(testElement); docEl.appendChild(fakeBody); if (testElement.offsetHeight === 1) { docEl.classList.add(\"hairlines\"); } docEl.removeChild(fakeBody); } })(window, document); \u003c/script\u003e \u003cstyle\u003e * { margin: 0; padding: 0; box-sizing: border-box; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv\u003e \u003c/div\u003e \u003cscript\u003e window.onload = function () { setFont(); window.addEventListener(\"resize\", function () { setFont(); }) function setFont() { var div = document.querySelector(\"div\"); div.style.fontSize = document.querySelector(\"html\").style.fontSize; div.innerHTML = \"html的字体大小为\" + document.querySelector(\"html\").style.fontSize; } } \u003c/script\u003e \u003c/body\u003e \u003c/html\u003e 二、CSS 1、padding四个值的顺序 2、margin四个值的顺序 3、transform:translate()方法 默认情况下，坐标轴原点为屏幕的左上角\n结论：当移动的数是正数时，在Y轴方向上，相对原来的位置向下移动，在X轴方向上，相对原来的位置向右移动。\n结论：当移动的数是负数时，在Y轴方向上，相对原来的位置向上移动，在X轴方向上，相对原来的位置向左移动。\n实战代码，先改变了坐标轴原点，再写偏移位置 top: 50%; left: 50%; transform: translate(-50%, -50%); //弹性布局，垂直水平居中 display: flex; flex-wrap: wrap; align-items: center; justify-content: center; 4、CSS实现盒子水平居中、垂直居中和水平垂直都居中 5、高级的边框样式 （1）颜色 ::v-deep .el-input__inner { background-color: transparent !important; border-color:#80ffff; box-shadow: 1px 1px 5px 1px RGB(128,255,255,0.8) inset; height: 30px; } （2）box-sizing: border-box; 解决CSS中padding（内边距）margin（外边距）撑大盒子的问题 拓展 box-sizing: content-box（为内容的宽高）（实际上,还有padding+边框+margin撑大盒子） |border-box（为内容+padding+边框的总宽高） |inherit（从父元素继承 box-sizing 属性）; ",
+  "wordCount" : "4466",
+  "inLanguage": "zh",
+  "datePublished": "2023-12-14T15:14:57+08:00",
+  "dateModified": "2023-12-14T15:14:57+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "郑文玲"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hanson-study.netlify.app/posts/tech/html+css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hanson's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hanson-study.netlify.app/img/Q.gif"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hanson-study.netlify.app/" accesskey="h" title="Hanson&#39;s Blog (Alt + H)">
+            <img src="https://hanson-study.netlify.app/img/Q.gif" alt="logo" aria-label="logo"
+                 height="35">Hanson&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://hanson-study.netlify.app/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/" title="🏠 主页">
+                <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/tags" title="🧩 标签">
+                <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/links" title="🤝 友链">
+                <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://hanson-study.netlify.app/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/tech/">👨🏻‍💻 技术</a></div>
+            <h1 class="post-title">
+                Html&#43;css实战笔记
+            </h1>
+            <div class="post-description">
+                前端html&#43;css学习笔记
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2023-12-14
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>4466字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>9分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>郑文玲
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://hanson-study.netlify.app/tags/%E5%89%8D%E7%AB%AF/" style="color: var(--secondary)!important;">前端</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.27/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://hanson-study.netlify.app/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId: "https://hanson-reviewapi.netlify.app/.netlify/functions/twikoo", 
+                                region: "ap-guangzhou", 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80html%e5%ae%9e%e6%88%98%e7%ac%94%e8%ae%b0" aria-label="一、html实战笔记">一、html实战笔记</a><ul>
+                        
+                <li>
+                    <a href="#1mdn%e5%89%8d%e7%ab%af%e7%a5%9e%e4%b9%a6-html%e5%92%8ccss%e9%83%bd%e6%9c%89%e5%90%84%e7%a7%8d%e5%90%84%e6%a0%b7%e7%9a%84" aria-label="1、MDN前端神书 (html和css都有，各种各样的)">1、MDN前端神书 (html和css都有，各种各样的)</a></li>
+                <li>
+                    <a href="#2tailwind-css" aria-label="2、Tailwind CSS">2、Tailwind CSS</a></li>
+                <li>
+                    <a href="#3bootstrap" aria-label="3、Bootstrap">3、Bootstrap</a></li>
+                <li>
+                    <a href="#4w3school" aria-label="4、W3school">4、W3school</a></li>
+                <li>
+                    <a href="#5easyiconjavaswing%e9%82%a3%e5%9d%97%e7%9f%a5%e9%81%93%e7%9a%84" aria-label="5、easyicon（javaSwing那块知道的）">5、easyicon（javaSwing那块知道的）</a></li>
+                <li>
+                    <a href="#2%e4%b8%89%e5%a4%a7%e6%a0%87%e7%ad%be%e5%85%83%e7%b4%a0%e4%bb%a5%e5%8f%8asetion%e6%a0%87%e7%ad%be%e7%9a%84%e4%ba%86%e8%a7%a3" aria-label="2、三大标签元素以及setion标签的了解">2、三大标签元素以及setion标签的了解</a></li>
+                <li>
+                    <a href="#3html5%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a0%87%e7%ad%be%e5%90%8d" aria-label="3、html5自定义标签名">3、html5自定义标签名</a></li>
+                <li>
+                    <a href="#4header%e6%a0%87%e7%ad%be" aria-label="4、header标签">4、header标签</a></li>
+                <li>
+                    <a href="#%e5%93%8d%e5%ba%94%e5%bc%8f%e5%b8%83%e5%b1%80%e8%87%aa%e9%80%82%e5%ba%94%e5%b8%83%e5%b1%80" aria-label="响应式布局、自适应布局">响应式布局、自适应布局</a></li>
+                <li>
+                    <a href="#%e5%ae%9e%e7%8e%b0%e7%bd%91%e9%a1%b5%e8%87%aa%e9%80%82%e5%ba%94%e4%b8%8d%e5%90%8c%e5%b0%ba%e5%af%b8-%e5%b1%8f%e5%b9%95pc%e7%ab%af" aria-label="实现网页自适应不同尺寸 屏幕（PC端）">实现网页自适应不同尺寸 屏幕（PC端）</a></li>
+                <li>
+                    <a href="#%e5%9f%ba%e4%ba%8e%e7%ad%89%e6%af%94%e7%bc%a9%e6%94%be%e7%9a%84%e5%a4%a7%e5%b1%8f%e8%87%aa%e9%80%82%e5%ba%94%e6%96%b9%e6%a1%88" aria-label="基于等比缩放的大屏自适应方案">基于等比缩放的大屏自适应方案</a></li>
+                <li>
+                    <a href="#html%e9%a1%b5%e9%9d%a2%e5%a6%82%e4%bd%95%e4%b8%8d%e5%90%8c%e8%ae%be%e5%a4%87%e8%87%aa%e9%80%82%e5%ba%94%e7%bc%a9%e6%94%be%e6%af%94%e4%be%8b" aria-label="html页面如何不同设备自适应缩放比例">html页面如何不同设备自适应缩放比例</a></li>
+                <li>
+                    <a href="#ui%e8%ae%be%e8%ae%a1%e7%a8%bf%e5%92%8c%e7%94%b5%e8%84%91%e5%b1%8f%e5%b9%95%e5%b0%ba%e5%af%b8%e4%b8%8d%e5%90%8c" aria-label="UI设计稿和电脑屏幕尺寸不同">UI设计稿和电脑屏幕尺寸不同</a></li>
+                <li>
+                    <a href="#%e5%88%9d%e5%a7%8b%e5%8c%96css%e6%a0%b7%e5%bc%8f" aria-label="初始化CSS样式">初始化CSS样式</a></li>
+                <li>
+                    <a href="#%e5%a6%82%e4%bd%95%e8%ae%a9%e5%b0%8f%e7%9b%92%e5%ad%90%e5%9c%a8%e5%a4%a7%e7%9b%92%e5%ad%90%e4%b8%ad%e5%9e%82%e7%9b%b4%e5%92%8c%e6%b0%b4%e5%b9%b3%e5%b1%85%e4%b8%ad" aria-label="如何让小盒子在大盒子中垂直和水平居中">如何让小盒子在大盒子中垂直和水平居中</a></li>
+                <li>
+                    <a href="#%e9%a1%b5%e9%9d%a2%e5%b8%83%e5%b1%80%e5%8f%8a%e8%ae%be%e5%a4%87%e9%80%82%e9%85%8d%e5%8d%83%e9%94%8b%e6%95%99%e8%82%b2" aria-label="页面布局及设备适配【千锋教育】">页面布局及设备适配【千锋教育】</a></li>
+                <li>
+                    <a href="#%e6%8b%89%e5%8b%be%e7%bd%91%e5%ae%9e%e6%88%98" aria-label="拉勾网实战">拉勾网实战</a><ul>
+                        
+                <li>
+                    <a href="#1%e8%ae%be%e8%ae%a1%e7%a8%bf%e5%87%ba%e8%87%aa%e4%ba%8e%e5%93%aa%e4%b8%aa%e5%b1%8f%e5%b9%95" aria-label="1、设计稿出自于哪个屏幕">1、设计稿出自于哪个屏幕</a></li>
+                <li>
+                    <a href="#2%e5%a4%b4%e9%83%a8%e5%af%bc%e8%88%aa" aria-label="2、头部导航">2、头部导航</a></li>
+                <li>
+                    <a href="#3%e4%b8%bb%e4%bd%93%e5%8c%ba%e5%9f%9f%e5%b8%83%e5%b1%80" aria-label="3、主体区域布局">3、主体区域布局</a></li>
+                <li>
+                    <a href="#4%e5%b0%be%e9%83%a8%e5%8c%ba%e5%9f%9f" aria-label="4、尾部区域">4、尾部区域</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%89%93%e5%ba%95%e8%a3%a4%e5%ae%9e%e6%88%98rem%e5%b8%83%e5%b1%80" aria-label="打底裤实战（rem布局）">打底裤实战（rem布局）</a><ul>
+                        
+                <li>
+                    <a href="#1%e8%ae%a4%e8%af%86%e4%b8%80%e4%ba%9b%e5%8d%95%e4%bd%8d" aria-label="1、认识一些单位">1、认识一些单位</a></li>
+                <li>
+                    <a href="#2%e5%bc%80%e5%a7%8b%e5%b8%83%e5%b1%80" aria-label="2、开始布局">2、开始布局</a></li>
+                <li>
+                    <a href="#3%e5%af%bc%e8%88%aa%e5%8c%ba%e5%9f%9f" aria-label="3、导航区域">3、导航区域</a></li>
+                <li>
+                    <a href="#4%e4%b8%bb%e4%bd%93%e5%8c%ba%e5%9f%9f" aria-label="4、主体区域">4、主体区域</a></li>
+                <li>
+                    <a href="#5flexblejs%e5%b8%83%e5%b1%80" aria-label="5、flexble.js布局">5、flexble.js布局</a></li></ul>
+                </li>
+                <li>
+                    <a href="#pc%e7%ab%af%e9%a1%b5%e9%9d%a2%e5%a6%82%e4%bd%95%e9%80%82%e9%85%8d%e4%b8%8d%e5%90%8c%e5%b1%8f%e5%b9%95%e5%a4%a7%e5%b0%8f" aria-label="PC端页面如何适配不同屏幕大小">PC端页面如何适配不同屏幕大小</a><ul>
+                        
+                <li>
+                    <a href="#1%e5%a6%82%e4%bd%95%e8%bf%9b%e8%a1%8cpc%e7%ab%af%e5%a4%9a%e5%b1%8f%e9%80%82%e9%85%8d" aria-label="（1）如何进行PC端多屏适配">（1）如何进行PC端多屏适配</a></li>
+                <li>
+                    <a href="#2%e5%a4%9a%e5%b1%8f%e9%80%82%e9%85%8d%e7%9a%84%e5%87%a0%e7%a7%8d%e6%96%b9%e6%b3%95" aria-label="（2）多屏适配的几种方法：">（2）多屏适配的几种方法：</a></li>
+                <li>
+                    <a href="#3%e4%bd%bf%e7%94%a8%e4%b8%8a%e8%bf%b0%e6%96%b9%e6%a1%88%e7%9a%84%e6%ad%a5%e9%aa%a4" aria-label="（3）使用上述方案的步骤：">（3）使用上述方案的步骤：</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%ba%8ccss" aria-label="二、CSS">二、CSS</a><ul>
+                        
+                <li>
+                    <a href="#1padding%e5%9b%9b%e4%b8%aa%e5%80%bc%e7%9a%84%e9%a1%ba%e5%ba%8f" aria-label="1、padding四个值的顺序">1、padding四个值的顺序</a></li>
+                <li>
+                    <a href="#2margin%e5%9b%9b%e4%b8%aa%e5%80%bc%e7%9a%84%e9%a1%ba%e5%ba%8f" aria-label="2、margin四个值的顺序">2、margin四个值的顺序</a></li>
+                <li>
+                    <a href="#3transformtranslate%e6%96%b9%e6%b3%95" aria-label="3、transform:translate()方法">3、transform:translate()方法</a></li>
+                <li>
+                    <a href="#4css%e5%ae%9e%e7%8e%b0%e7%9b%92%e5%ad%90%e6%b0%b4%e5%b9%b3%e5%b1%85%e4%b8%ad%e5%9e%82%e7%9b%b4%e5%b1%85%e4%b8%ad%e5%92%8c%e6%b0%b4%e5%b9%b3%e5%9e%82%e7%9b%b4%e9%83%bd%e5%b1%85%e4%b8%ad" aria-label="4、CSS实现盒子水平居中、垂直居中和水平垂直都居中">4、CSS实现盒子水平居中、垂直居中和水平垂直都居中</a></li>
+                <li>
+                    <a href="#5%e9%ab%98%e7%ba%a7%e7%9a%84%e8%be%b9%e6%a1%86%e6%a0%b7%e5%bc%8f" aria-label="5、高级的边框样式">5、高级的边框样式</a><ul>
+                        
+                <li>
+                    <a href="#1%e9%a2%9c%e8%89%b2" aria-label="（1）颜色">（1）颜色</a></li>
+                <li>
+                    <a href="#2box-sizing-border-box" aria-label="（2）box-sizing: border-box;">（2）box-sizing: border-box;</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h2 id="一html实战笔记">一、html实战笔记<a hidden class="anchor" aria-hidden="true" href="#一html实战笔记">#</a></h2>
+<h3 id="1mdn前端神书-html和css都有各种各样的">1、MDN前端神书 (html和css都有，各种各样的)<a hidden class="anchor" aria-hidden="true" href="#1mdn前端神书-html和css都有各种各样的">#</a></h3>
+<p>直接百度官方搜索，有文档</p>
+<h3 id="2tailwind-css">2、Tailwind CSS<a hidden class="anchor" aria-hidden="true" href="#2tailwind-css">#</a></h3>
+<h3 id="3bootstrap">3、Bootstrap<a hidden class="anchor" aria-hidden="true" href="#3bootstrap">#</a></h3>
+<h3 id="4w3school">4、W3school<a hidden class="anchor" aria-hidden="true" href="#4w3school">#</a></h3>
+<h3 id="5easyiconjavaswing那块知道的">5、easyicon（javaSwing那块知道的）<a hidden class="anchor" aria-hidden="true" href="#5easyiconjavaswing那块知道的">#</a></h3>
+<p><img loading="lazy" src="image-20230911195806258.png" alt="image-20230911195806258"  />
+</p>
+<h3 id="2三大标签元素以及setion标签的了解">2、三大标签元素以及setion标签的了解<a hidden class="anchor" aria-hidden="true" href="#2三大标签元素以及setion标签的了解">#</a></h3>
+<p><img loading="lazy" src="image-20230911163041225.png" alt="image-20230911163041225"  />
+</p>
+<p>/* 转换成块元素，才可设置高度 */</p>
+<p>display: block;</p>
+<p>很多人经常会把块元素、行内块元素、行内元素的知识混淆掉，今天我归纳下，做个小结：</p>
+<p>1、块元素独占一行，而行内块元素和行内元素可以和别人共处一行；</p>
+<p>2、常见的块元素有div、p、h1、ol、ul、dl、tabel、form；</p>
+<p>3、常见的行内元素有a、span、i、strong、em、label、cite、code；</p>
+<p>4、常见的行内块元素有img、input、select、textarea、button；</p>
+<p>5、行内块元素的特性和块元素完全一样，除了一点：它不独占一行；</p>
+<p>6、块元素、行内块、行内元素都有各自的盒模型。三者的盒模型有相同的地方，也有不同的地方；</p>
+<p>7、行内元素不能设置“width”和“height”，块元素和行内块元素可以设置“width”和“height”；</p>
+<p>8、行内元素在水平方向上的padding、border、margin的特性和块元素一模一样；</p>
+<p>9、行内元素在垂直方向上的padding、border、margin的特性和块元素很不一样：padding和border可以设置，但是不参与布局；margin设置都不能设置；</p>
+<p>10、行内元素不能包含块元素，除了a元素；
+11、行内元素可以包含别的行内元素；</p>
+<p>12、行内元素脱离文档流后，会变成块元素；</p>
+<p>13、可以给行内元素设置背景图片（“background-image”）；</p>
+<p>14、块元素的宽默认是父元素宽的100%，高由内容撑起来；</p>
+<p>15、行内元素的宽和高都由内容撑起来；</p>
+<p>16、其实块元素、行内块元素、行内元素之间可以互换，只需要给display属性赋不同的值（block、inline-block、inline）就可以了。</p>
+<h3 id="3html5自定义标签名">3、html5自定义标签名<a hidden class="anchor" aria-hidden="true" href="#3html5自定义标签名">#</a></h3>
+<p>这说明，浏览器对待自定义元素，就像对待标准元素一样，只是没有默认的样式和行为。这种处理方式是写入 <a href="https://cloud.tencent.com/developer/tools/blog-entry?target=https%3A%2F%2Fwww.w3.org%2FTR%2Fhtml5%2Finfrastructure.html%23extensibility-0">HTML5 标准</a>的。</p>
+<p>“自定义元素的名字必须包含一个破折号（<code>-</code>）</p>
+<p>所以<code>&lt;x-tags&gt;</code>、<code>&lt;my-element&gt;</code>和<code>&lt;my-awesome-app&gt;</code>都是正确的名字</p>
+<p>而<code>&lt;tabs&gt;</code>和<code>&lt;foo_bar&gt;</code>是不正确的。这样的限制使得 HTML 解析器可以分辨那些是标准元素，哪些是自定义元素。”</p>
+<h3 id="4header标签">4、header标签<a hidden class="anchor" aria-hidden="true" href="#4header标签">#</a></h3>
+<p>这个标签里面必须包含一个h1之类的标题标签</p>
+<h3 id="响应式布局自适应布局">响应式布局、自适应布局<a hidden class="anchor" aria-hidden="true" href="#响应式布局自适应布局">#</a></h3>
+<p>bookstrap响应式框架的网站：页面窗口拉大拉小显示页面内容的其中一些</p>
+<p><img loading="lazy" src="image-20230912105540776.png" alt="image-20230912105540776"  />
+</p>
+<p>在不同情况下rem是有一个缩放功能</p>
+<p>宽度和高度都不要写死</p>
+<p>px写死</p>
+<p>rem写活  %写活</p>
+<p>设备的划分情况为：</p>
+<p>小于768的为超小屏幕（手机）</p>
+<p>768~992之间的为小屏设备（平板）</p>
+<p>992~1200的中等屏幕（桌面显示器）</p>
+<p>大于1200的宽屏设备（大桌面显示器）</p>
+<h3 id="实现网页自适应不同尺寸-屏幕pc端">实现网页自适应不同尺寸 屏幕（PC端）<a hidden class="anchor" aria-hidden="true" href="#实现网页自适应不同尺寸-屏幕pc端">#</a></h3>
+<p>其中1920就是UI设计稿提供的宽度，这样就算是屏幕不是1920也可以根据比例放大缩小，实现百分百还原设计稿。</p>
+<p>​    对应的css样式中 1rem=100px; 根据设计稿效果还原即可</p>
+<h3 id="基于等比缩放的大屏自适应方案">基于等比缩放的大屏自适应方案<a hidden class="anchor" aria-hidden="true" href="#基于等比缩放的大屏自适应方案">#</a></h3>
+<h3 id="html页面如何不同设备自适应缩放比例">html页面如何不同设备自适应缩放比例<a hidden class="anchor" aria-hidden="true" href="#html页面如何不同设备自适应缩放比例">#</a></h3>
+<p>width=device-width ：表示宽度是设备屏幕的宽度
+height=device-height ：表示宽度是设备屏幕的宽度
+initial-scale=1.0：表示初始的缩放比例(初始规模为1.0倍，即原始大小)
+minimum-scale=0.5：表示最小的缩放比例
+maximum-scale=2.0：表示最大的缩放比例
+user-scalable=yes或者1：表示用户是否可以调整缩放比例(no或者0：表示不可调整缩放比例)
+target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。</p>
+<h3 id="ui设计稿和电脑屏幕尺寸不同">UI设计稿和电脑屏幕尺寸不同<a hidden class="anchor" aria-hidden="true" href="#ui设计稿和电脑屏幕尺寸不同">#</a></h3>
+<p>前端页面在PC端不同分辨率屏幕的适配&mdash;-比例缩放</p>
+<p>通常UI提供PC端项目的设计稿尺寸都是1920*1080(16:9)的，但是电脑显示屏的分辨率是不固定的，所以按照这个固定像素做出来的前端页面在不同的显示屏上可能会出现页面显示不全或者是页面无法充满屏幕的情况。此时，“人美心善”的客户就会提出要求，要让页面充满屏幕。</p>
+<p>作者：罖卋罖
+链接：https://juejin.cn/post/7083702725690523685
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>【马面案例】 后面学到vue会有更多的适配方案</p>
+<p><img loading="lazy" src="image-20230913200528099.png" alt="image-20230913200528099"  />
+</p>
+<p><img loading="lazy" src="image-20230913200705091.png" alt="image-20230913200705091"  />
+</p>
+<p><img loading="lazy" src="image-20230913201624057.png" alt="image-20230913201624057"  />
+</p>
+<h3 id="初始化css样式">初始化CSS样式<a hidden class="anchor" aria-hidden="true" href="#初始化css样式">#</a></h3>
+<p>各种基本网页都会有的</p>
+<h3 id="如何让小盒子在大盒子中垂直和水平居中">如何让小盒子在大盒子中垂直和水平居中<a hidden class="anchor" aria-hidden="true" href="#如何让小盒子在大盒子中垂直和水平居中">#</a></h3>
+<p><img loading="lazy" src="image-20230913205525761.png" alt="image-20230913205525761"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可
+</span></span><span style="display:flex;"><span>在小盒子样式中写{
+</span></span><span style="display:flex;"><span>height:
+</span></span><span style="display:flex;"><span>line-height:
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="页面布局及设备适配千锋教育">页面布局及设备适配【千锋教育】<a hidden class="anchor" aria-hidden="true" href="#页面布局及设备适配千锋教育">#</a></h3>
+<p>（不管分配率怎么变，布局都不会乱是不是）</p>
+<p>100%布局（弹性布局）：不管分辨率怎么改变，位置都不会变，屏幕大间距也大文字大小也变化，会比例失调</p>
+<p>“拉勾”案例</p>
+<p><img loading="lazy" src="image-20230913215600547.png" alt="image-20230913215600547"  />
+</p>
+<p>rem布局（等比例缩放布局）：</p>
+<p>“网易”案例</p>
+<p><img loading="lazy" src="image-20230913221921699.png" alt="image-20230913221921699"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>html {
+</span></span><span style="display:flex;"><span>	font-size: 16px;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>如果需要动态的对html的字体进行改变，就需要通过js进行操作
+</span></span></code></pre></div><p><img loading="lazy" src="image-20230913224034493.png" alt="image-20230913224034493"  />
+</p>
+<p>web端单位：px是写死的单位大小</p>
+<p>移动端单位：是比例</p>
+<p><img loading="lazy" src="image-20230913224250879.png" alt="image-20230913224250879"  />
+</p>
+<p>通过vm实现移动端页面实战布局</p>
+<p><img loading="lazy" src="image-20230913224549579.png" alt="image-20230913224549579"  />
+</p>
+<p><img loading="lazy" src="image-20230913224448112.png" alt="image-20230913224448112"  />
+</p>
+<p><img loading="lazy" src="image-20230913225009551.png" alt="image-20230913225009551"  />
+</p>
+<h3 id="拉勾网实战">拉勾网实战<a hidden class="anchor" aria-hidden="true" href="#拉勾网实战">#</a></h3>
+<p><img loading="lazy" src="image-20230913225537921.png" alt="image-20230913225537921"  />
+</p>
+<p><img loading="lazy" src="image-20230913225730474.png" alt="image-20230913225730474"  />
+</p>
+<p>PC端转化成手机端</p>
+<p>如何获取设计稿</p>
+<p><img loading="lazy" src="image-20230913231001611.png" alt="image-20230913231001611"  />
+</p>
+<p><img loading="lazy" src="image-20230913232229243.png" alt="image-20230913232229243"  />
+</p>
+<p>点击上图两个，这是就可以直接下载设计稿了，用PS是打开</p>
+<p>PC端转移动端问题</p>
+<p><img loading="lazy" src="image-20230913234752131.png" alt="image-20230913234752131"  />
+</p>
+<p><img loading="lazy" src="image-20230913234850620.png" alt="image-20230913234850620"  />
+</p>
+<p>不可以双击放大了</p>
+<p><img loading="lazy" src="image-20230913235151838.png" alt="image-20230913235151838"  />
+</p>
+<p>关闭ul自带的小圆点、取消列表项的样式</p>
+<p>关闭img自带的边框、取消图片下边的留白</p>
+<p>a标签的下划线给取消掉</p>
+<p>取消input标签的外边线</p>
+<p>再添加上窗口自适应</p>
+<p>同时让body容器去触发弹性盒子，触发弹性盒子之后修改主轴方向就好了</p>
+<p>利用弹性盒子内容完成布局就可以</p>
+<p><img loading="lazy" src="image-20230914001818297.png" alt="image-20230914001818297"  />
+</p>
+<h4 id="1设计稿出自于哪个屏幕">1、设计稿出自于哪个屏幕<a hidden class="anchor" aria-hidden="true" href="#1设计稿出自于哪个屏幕">#</a></h4>
+<p>用PS测量得得到宽度为1920px（像素）就知道出自于哪个屏幕了，就可以得到设备像素比必然是巴拉，也就是dpr=巴拉</p>
+<h4 id="2头部导航">2、头部导航<a hidden class="anchor" aria-hidden="true" href="#2头部导航">#</a></h4>
+<p>也就相当于，从设计稿里每次测量的物理像素都需要把dpr除掉</p>
+<p><img loading="lazy" src="image-20230914002520578.png" alt="image-20230914002520578"  />
+</p>
+<p><img loading="lazy" src="image-20230914002824910.png" alt="image-20230914002824910"  />
+</p>
+<p><img loading="lazy" src="image-20230914002949592.png" alt="image-20230914002949592"  />
+</p>
+<p>【在这开始，之后的所有盒子大小尺寸都要设置成 物理像素/dpr （px）】</p>
+<p>但是你给了一个固定的宽度，让宽度自适应，始终占屏幕的一整行（这里的宽度可以注释掉）</p>
+<p><img loading="lazy" src="image-20230914003650118.png" alt="image-20230914003650118"  />
+</p>
+<p>设置文本水平居中对齐  text-align:center，然后设置height和line-height高度一样</p>
+<p>触发弹性盒子display:flex，再设置里面的两个小盒子两端贴边对齐 justify-content:space-between;，想让左边和右边都有间距，设置大盒子的内边距padding:0px 17px;（上下、左右），再让文本垂直居中对齐（设置height和line-height高度一样）</p>
+<p><img loading="lazy" src="image-20230914004800103.png" alt="image-20230914004800103"  />
+</p>
+<p>找到大盒子(nav)中的第一个小盒子(span)</p>
+<p>nav&gt;span:nth-child(1){巴拉巴拉样式}</p>
+<h4 id="3主体区域布局">3、主体区域布局<a hidden class="anchor" aria-hidden="true" href="#3主体区域布局">#</a></h4>
+<p>让大盒子中的几个小盒子在一行内显示  display:flex;</p>
+<p>占剩余宽度或者剩余高度的所有用  flex:1;</p>
+<h4 id="4尾部区域">4、尾部区域<a hidden class="anchor" aria-hidden="true" href="#4尾部区域">#</a></h4>
+<p><img loading="lazy" src="image-20230914100144546.png" alt="image-20230914100144546"  />
+</p>
+<h3 id="打底裤实战rem布局">打底裤实战（rem布局）<a hidden class="anchor" aria-hidden="true" href="#打底裤实战rem布局">#</a></h3>
+<h4 id="1认识一些单位">1、认识一些单位<a hidden class="anchor" aria-hidden="true" href="#1认识一些单位">#</a></h4>
+<p><img loading="lazy" src="image-20230914101028695.png" alt="image-20230914101028695"  />
+</p>
+<p><img loading="lazy" src="image-20230914101135014.png" alt="image-20230914101135014"  />
+</p>
+<p><img loading="lazy" src="image-20230914101539356.png" alt="image-20230914101539356"  />
+</p>
+<p><img loading="lazy" src="image-20230914101637299.png" alt="image-20230914101637299"  />
+</p>
+<p><img loading="lazy" src="image-20230914101911097.png" alt="image-20230914101911097"  />
+</p>
+<p><img loading="lazy" src="image-20230914102007233.png" alt="image-20230914102007233"  />
+</p>
+<p>屏幕切换成横屏，vmin在最小值的那一个方向作为参照物，所以在这里屏幕切换时，红条的高度不变</p>
+<p><img loading="lazy" src="image-20230914102129262.png" alt="image-20230914102129262"  />
+</p>
+<h4 id="2开始布局">2、开始布局<a hidden class="anchor" aria-hidden="true" href="#2开始布局">#</a></h4>
+<p><img loading="lazy" src="image-20230914103414549.png" alt="image-20230914103414549"  />
+</p>
+<p><img loading="lazy" src="image-20230914104331890.png" alt="image-20230914104331890"  />
+</p>
+<p><img loading="lazy" src="image-20230914104758345.png" alt="image-20230914104758345"  />
+</p>
+<h4 id="3导航区域">3、导航区域<a hidden class="anchor" aria-hidden="true" href="#3导航区域">#</a></h4>
+<p>主轴上对齐，两端环绕，还有flex:1;实现</p>
+<p><img loading="lazy" src="image-20230914105120872.png" alt="image-20230914105120872"  />
+</p>
+<p>接下来用两端对齐完成</p>
+<p><img loading="lazy" src="image-20230914105632282.png" alt="image-20230914105632282"  />
+</p>
+<h4 id="4主体区域">4、主体区域<a hidden class="anchor" aria-hidden="true" href="#4主体区域">#</a></h4>
+<p><img loading="lazy" src="image-20230914111903179.png" alt="image-20230914111903179"  />
+</p>
+<p><img loading="lazy" src="image-20230914110449071.png" alt="image-20230914110449071"  />
+</p>
+<p><img loading="lazy" src="image-20230914110217297.png" alt="image-20230914110217297"  />
+</p>
+<p><img loading="lazy" src="image-20230914110609928.png" alt="image-20230914110609928"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>flex-wrap:wrap  一行放不下了，必要时可以自动换行
+</span></span></code></pre></div><h4 id="5flexblejs布局">5、flexble.js布局<a hidden class="anchor" aria-hidden="true" href="#5flexblejs布局">#</a></h4>
+<p><img loading="lazy" src="image-20230914151051872.png" alt="image-20230914151051872"  />
+</p>
+<p><img loading="lazy" src="image-20230914151853735.png" alt="image-20230914151853735"  />
+</p>
+<h3 id="pc端页面如何适配不同屏幕大小">PC端页面如何适配不同屏幕大小<a hidden class="anchor" aria-hidden="true" href="#pc端页面如何适配不同屏幕大小">#</a></h3>
+<p>PC端页面适应不同分辨率</p>
+<h4 id="1如何进行pc端多屏适配">（1）如何进行PC端多屏适配<a hidden class="anchor" aria-hidden="true" href="#1如何进行pc端多屏适配">#</a></h4>
+<h4 id="2多屏适配的几种方法">（2）多屏适配的几种方法：<a hidden class="anchor" aria-hidden="true" href="#2多屏适配的几种方法">#</a></h4>
+<p>使用媒体查询，如 bootstrap等框架
+制作设计图的时候，给一个固定的宽度，如1200，背景使用纯色，或者大背景图
+使用rem
+其他
+<strong>这里介绍一下 rem 适配方案：</strong></p>
+<p>能够流畅的适配不同分辨率的屏幕，并且开发效率跟使用px开发没什么区别，只是多了将px转化成rem的css函数</p>
+<p>效果图如下（可以看到在不同的分辨率下，依然可以保持较好的布局）：</p>
+<h4 id="3使用上述方案的步骤">（3）使用上述方案的步骤：<a hidden class="anchor" aria-hidden="true" href="#3使用上述方案的步骤">#</a></h4>
+<p>1、根据设计稿算出 px转化成rem 的缩放比（这里我的设计稿是 1920px，然后上面导航栏的字体大小为34px，所以都以这个为基准，算出缩放比为 56.47，然后反过来除就等于导航栏字体大小，其他的图片、文字、div都按照这个去算，不懂得自己动手敲一遍，然后使用px的地方用这个函数代替就好了，这里使用的是 scss）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ratio: 1920 / 56.47; // 缩放比   34
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>// 返回对应屏幕下的rem值
+</span></span><span style="display:flex;"><span>@function px2rem($px){
+</span></span><span style="display:flex;"><span>  @return $px / $ratio + rem
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>2、样式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）：
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  .title {
+</span></span><span style="display:flex;"><span>    position: absolute;
+</span></span><span style="display:flex;"><span>    top: px2rem(70);
+</span></span><span style="display:flex;"><span>    color: $title-color;
+</span></span><span style="display:flex;"><span>    font-size: $font-size-title;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">获取当前设备的宽度，设置</span>rem的根字体大小
+</span></span><span style="display:flex;"><span>      let width <span style="color:#f92672">=</span> window<span style="color:#f92672">.</span>innerWidth
+</span></span><span style="display:flex;"><span>      width <span style="color:#f92672">=</span> width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1200</span> <span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#ae81ff">1200</span> : width
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> htmlObj <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>getElementsByTagName(<span style="color:#e6db74">&#39;html&#39;</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>      htmlObj<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> width <span style="color:#f92672">/</span> <span style="color:#ae81ff">56.47</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">对</span>resize事件进行浏览器兼容处理
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>(document<span style="color:#f92672">.</span>createEvent) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> event <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>createEvent(<span style="color:#e6db74">&#34;HTMLEvents&#34;</span>);
+</span></span><span style="display:flex;"><span>        event<span style="color:#f92672">.</span>initEvent(<span style="color:#e6db74">&#34;resize&#34;</span>, true, true);
+</span></span><span style="display:flex;"><span>        window<span style="color:#f92672">.</span>dispatchEvent(event);
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(document<span style="color:#f92672">.</span>createEventObject) {
+</span></span><span style="display:flex;"><span>        window<span style="color:#f92672">.</span>fireEvent(<span style="color:#e6db74">&#34;onresize&#34;</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">监听页面</span>resize事件<span style="color:#960050;background-color:#1e0010">，重新设置</span>rem的根字体大小
+</span></span><span style="display:flex;"><span>      window<span style="color:#f92672">.</span>onresize <span style="color:#f92672">=</span> function() {
+</span></span><span style="display:flex;"><span>        let width <span style="color:#f92672">=</span> window<span style="color:#f92672">.</span>innerWidth
+</span></span><span style="display:flex;"><span>        width <span style="color:#f92672">=</span> width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1200</span> <span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#ae81ff">1200</span> : width
+</span></span><span style="display:flex;"><span>        htmlObj<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> width <span style="color:#f92672">/</span> <span style="color:#ae81ff">56.47</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>
+</span></span><span style="display:flex;"><span>      };
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p><img loading="lazy" src="image-20230914170949310.png" alt="image-20230914170949310"  />
+</p>
+<p><img loading="lazy" src="image-20230914170903959.png" alt="image-20230914170903959"  />
+</p>
+<p><img loading="lazy" src="image-20230914171032542.png" alt="image-20230914171032542"  />
+</p>
+<p><img loading="lazy" src="image-20230914171053840.png" alt="image-20230914171053840"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>flexible代码
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span>DOCTYPE html<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>head<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>meta charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>title<span style="color:#f92672">&gt;</span><span style="color:#960050;background-color:#1e0010">版心布局</span><span style="color:#f92672">&lt;/</span>title<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span>
+</span></span><span style="display:flex;"><span>    content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span> (function flexible(window, document) { <span style="color:#66d9ef">var</span> docEl <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>documentElement; <span style="color:#66d9ef">var</span> dpr <span style="color:#f92672">=</span> window<span style="color:#f92672">.</span>devicePixelRatio <span style="color:#f92672">||</span> <span style="color:#ae81ff">1</span>; function setBodyFontSize() { <span style="color:#66d9ef">if</span> (document<span style="color:#f92672">.</span>body) { document<span style="color:#f92672">.</span>body<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">*</span> dpr <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px&#34;</span>; } <span style="color:#66d9ef">else</span> { document<span style="color:#f92672">.</span>addEventListener(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, setBodyFontSize); } } setBodyFontSize(); function setRemUnit() { <span style="color:#66d9ef">var</span> rem <span style="color:#f92672">=</span> docEl<span style="color:#f92672">.</span>clientWidth <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>; docEl<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> rem <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px&#34;</span>; } setRemUnit(); window<span style="color:#f92672">.</span>addEventListener(<span style="color:#e6db74">&#34;resize&#34;</span>, setRemUnit); window<span style="color:#f92672">.</span>addEventListener(<span style="color:#e6db74">&#34;pageshow&#34;</span>, function (e) { <span style="color:#66d9ef">if</span> (e<span style="color:#f92672">.</span>persisted) { setRemUnit(); } }); <span style="color:#66d9ef">if</span> (dpr <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span>) { <span style="color:#66d9ef">var</span> fakeBody <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>createElement(<span style="color:#e6db74">&#34;body&#34;</span>); <span style="color:#66d9ef">var</span> testElement <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>createElement(<span style="color:#e6db74">&#34;div&#34;</span>); testElement<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>border <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;.5px solid transparent&#34;</span>; fakeBody<span style="color:#f92672">.</span>appendChild(testElement); docEl<span style="color:#f92672">.</span>appendChild(fakeBody); <span style="color:#66d9ef">if</span> (testElement<span style="color:#f92672">.</span>offsetHeight <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span>) { docEl<span style="color:#f92672">.</span>classList<span style="color:#f92672">.</span>add(<span style="color:#e6db74">&#34;hairlines&#34;</span>); } docEl<span style="color:#f92672">.</span>removeChild(fakeBody); } })(window, document); <span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>style<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> {
+</span></span><span style="display:flex;"><span>      margin: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      padding: <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>      box<span style="color:#f92672">-</span>sizing: border<span style="color:#f92672">-</span>box;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>style<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>head<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>body<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    window<span style="color:#f92672">.</span>onload <span style="color:#f92672">=</span> function () {
+</span></span><span style="display:flex;"><span>      setFont();
+</span></span><span style="display:flex;"><span>      window<span style="color:#f92672">.</span>addEventListener(<span style="color:#e6db74">&#34;resize&#34;</span>, function () {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        setFont();
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>      function setFont() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> div <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>querySelector(<span style="color:#e6db74">&#34;div&#34;</span>);
+</span></span><span style="display:flex;"><span>        div<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span>querySelector(<span style="color:#e6db74">&#34;html&#34;</span>)<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize;
+</span></span><span style="display:flex;"><span>        div<span style="color:#f92672">.</span>innerHTML <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;html的字体大小为&#34;</span> <span style="color:#f92672">+</span> document<span style="color:#f92672">.</span>querySelector(<span style="color:#e6db74">&#34;html&#34;</span>)<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>body<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>html<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p><img loading="lazy" src="image-20230914171257861.png" alt="image-20230914171257861"  />
+</p>
+<h2 id="二css">二、CSS<a hidden class="anchor" aria-hidden="true" href="#二css">#</a></h2>
+<h3 id="1padding四个值的顺序">1、padding四个值的顺序<a hidden class="anchor" aria-hidden="true" href="#1padding四个值的顺序">#</a></h3>
+<p><img loading="lazy" src="image-20230915130048517.png" alt="image-20230915130048517"  />
+</p>
+<h3 id="2margin四个值的顺序">2、margin四个值的顺序<a hidden class="anchor" aria-hidden="true" href="#2margin四个值的顺序">#</a></h3>
+<p><img loading="lazy" src="image-20230915133010287.png" alt="image-20230915133010287"  />
+</p>
+<h3 id="3transformtranslate方法">3、transform:translate()方法<a hidden class="anchor" aria-hidden="true" href="#3transformtranslate方法">#</a></h3>
+<p>默认情况下，坐标轴原点为屏幕的左上角</p>
+<p><img loading="lazy" src="image-20231209171655619.png" alt="image-20231209171655619"  />
+</p>
+<p><img loading="lazy" src="image-20231209171721269.png" alt="image-20231209171721269"  />
+</p>
+<p>结论：当移动的数是正数时，在Y轴方向上，相对原来的位置向下移动，在X轴方向上，相对原来的位置向右移动。</p>
+<p><img loading="lazy" src="image-20231209171748178.png" alt="image-20231209171748178"  />
+</p>
+<p>结论：当移动的数是负数时，在Y轴方向上，相对原来的位置向上移动，在X轴方向上，相对原来的位置向左移动。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>实战代码，先改变了坐标轴原点，再写偏移位置
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>top: 50%;
+</span></span><span style="display:flex;"><span>left: 50%;
+</span></span><span style="display:flex;"><span>transform: translate(-50%, -50%);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//弹性布局，垂直水平居中
+</span></span><span style="display:flex;"><span>display: flex;
+</span></span><span style="display:flex;"><span>flex-wrap: wrap;
+</span></span><span style="display:flex;"><span>align-items: center;
+</span></span><span style="display:flex;"><span>justify-content: center;
+</span></span></code></pre></div><p><img loading="lazy" src="image-20231209172301038.png" alt="image-20231209172301038"  />
+</p>
+<h3 id="4css实现盒子水平居中垂直居中和水平垂直都居中">4、CSS实现盒子水平居中、垂直居中和水平垂直都居中<a hidden class="anchor" aria-hidden="true" href="#4css实现盒子水平居中垂直居中和水平垂直都居中">#</a></h3>
+<h3 id="5高级的边框样式">5、高级的边框样式<a hidden class="anchor" aria-hidden="true" href="#5高级的边框样式">#</a></h3>
+<h4 id="1颜色">（1）颜色<a hidden class="anchor" aria-hidden="true" href="#1颜色">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>::v-deep .el-input__inner {
+</span></span><span style="display:flex;"><span>	  background-color: transparent !important;
+</span></span><span style="display:flex;"><span>	  border-color:#80ffff;
+</span></span><span style="display:flex;"><span>	  box-shadow: 1px 1px 5px 1px  RGB(128,255,255,0.8) inset;
+</span></span><span style="display:flex;"><span>	  height: 30px;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p><img loading="lazy" src="image-20231209173217867.png" alt="image-20231209173217867"  />
+</p>
+<h4 id="2box-sizing-border-box">（2）box-sizing: border-box;<a hidden class="anchor" aria-hidden="true" href="#2box-sizing-border-box">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>解决CSS中padding（内边距）margin（外边距）撑大盒子的问题
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>拓展
+</span></span><span style="display:flex;"><span>box-sizing: content-box（为内容的宽高）（实际上,还有padding+边框+margin撑大盒子）
+</span></span><span style="display:flex;"><span>			|border-box（为内容+padding+边框的总宽高）
+</span></span><span style="display:flex;"><span>			|inherit（从父元素继承 box-sizing 属性）;
+</span></span></code></pre></div><p><img loading="lazy" src="image-20231209174426608.png" alt="image-20231209174426608"  />
+</p>
+<p><img loading="lazy" src="image-20231209174930002.png" alt="image-20231209174930002"  />
+</p>
+
+
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://hanson-study.netlify.app/posts/title/%E5%AE%8F%E8%A7%82%E4%B8%8A%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BE%AE%E8%A7%82%E4%B8%8A%E6%98%AF%E5%A4%9A%E5%B0%91%E5%AE%B6%E5%BA%AD%E7%9A%84%E6%82%B2%E6%AC%A2%E7%A6%BB%E5%90%88/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>宏观上是数据,微观上是多少家庭的悲欢离合</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.27/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId: "https://hanson-reviewapi.netlify.app/.netlify/functions/twikoo",
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region: "ap-guangzhou",
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<footer class="footer">
+    <span>
+        Copyright
+        &copy;
+        2021-2023
+        
+        All Rights Reserved
+    </span>
+    
+    
+    <span id="busuanzi_container">
+        <span class="fa fa-user"></span> <span id="busuanzi_value_site_uv"></span>
+        <span class="fa fa-eye"></span> <span id="busuanzi_value_site_pv"></span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent +
+                    '\r\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>
