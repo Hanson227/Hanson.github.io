@@ -17,12 +17,12 @@
     </item>
     
     <item>
-      <title>ArkTS快速入门</title>
+      <title>ArkTS鸿蒙应用开发快速入门</title>
       <link>https://hanson-study.netlify.app/posts/tech/arkts%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
       <pubDate>Sat, 09 Dec 2023 17:52:33 +0800</pubDate>
       
       <guid>https://hanson-study.netlify.app/posts/tech/arkts%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
-      <description>ArkTS是HarmonyOS(鸿蒙应用开发)优选的主力应用开发语言。它在TypeScript（简称TS）的基础上，匹配ArkUI框架，扩展了声明式UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发跨端应用。</description>
+      <description>ArkTS是HarmonyOS(鸿蒙应用开发)harmony优选的主力应用开发语言。它在TypeScript（简称TS）的基础上，匹配ArkUI框架，扩展了声明式UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发跨端应用。</description>
     </item>
     
     <item>
