@@ -6,7 +6,16 @@
     <description>Recent content in 👨🏻‍💻 技术 on Hanson&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 Dec 2023 15:14:57 +0800</lastBuildDate><atom:link href="https://hanson-study.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 16:16:59 +0800</lastBuildDate><atom:link href="https://hanson-study.netlify.app/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C语言中volatile关键字的高级玩法</title>
+      <link>https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/</link>
+      <pubDate>Fri, 29 Dec 2023 16:16:59 +0800</pubDate>
+      
+      <guid>https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/</guid>
+      <description>在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。</description>
+    </item>
+    
     <item>
       <title>Html&#43;css实战笔记</title>
       <link>https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</link>

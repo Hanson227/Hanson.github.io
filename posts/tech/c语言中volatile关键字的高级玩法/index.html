@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>C语言中volatile关键字的高级玩法 | Hanson&#39;s Blog</title>
+<meta name="keywords" content="C语言, 单片机">
+<meta name="description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。">
+<meta name="author" content="Hanson">
+<link rel="canonical" href="https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="apple-touch-icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<link rel="mask-icon" href="https://hanson-study.netlify.app/img/Q.gif">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta property="og:title" content="C语言中volatile关键字的高级玩法" />
+<meta property="og:description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-29T16:16:59+08:00" />
+<meta property="article:modified_time" content="2023-12-29T16:16:59+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C语言中volatile关键字的高级玩法"/>
+<meta name="twitter:description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://hanson-study.netlify.app/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "👨🏻‍💻 技术",
+          "item": "https://hanson-study.netlify.app/posts/tech/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "C语言中volatile关键字的高级玩法",
+      "item": "https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "C语言中volatile关键字的高级玩法",
+  "name": "C语言中volatile关键字的高级玩法",
+  "description": "在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。",
+  "keywords": [
+    "C语言", "单片机"
+  ],
+  "articleBody": "1. 多线程编程中的volatile关键字 最常见的用途之一是在多线程编程中，通过volatile关键字告知编译器不要对变量进行优化，以避免出现意外的行为。例如，在多线程环境中，一个线程可能会修改某个变量，而另一个线程在不知情的情况下使用了这个变量。下面是一个示例，展示了在多线程编程中使用volatile的情况：\n#include #include volatile int sharedValue = 0; void *threadFunction(void *arg) { sharedValue = 10; return NULL; } int main() { pthread_t thread; pthread_create(\u0026thread, NULL, threadFunction, NULL); while (sharedValue != 10) { // 等待线程修改sharedValue } printf(\"sharedValue has been modified.\\n\"); pthread_join(thread, NULL); return 0; } 在这个例子中，sharedValue变量被声明为volatile，这样可以确保在不同线程中的修改能够被及时反映。\n2. 嵌入式编程中的volatile关键字 在嵌入式编程中，硬件寄存器和内存映射设备常常需要使用volatile关键字，以确保编译器不会对其进行优化，从而保证与硬件的交互是准确的。以下是一个示例，展示了在嵌入式环境中使用volatile关键字的情况：\n#include #define GPIO_PORT ((volatile unsigned int *)0x12345678) int main() { *GPIO_PORT = 0xFF; // 将端口设置为全高电平 // 假设在这里进行了一些与硬件相关的操作 unsigned int value = *GPIO_PORT; // 读取端口的值 printf(\"Value read from GPIO_PORT: %u\\n\", value); return 0; } 在这个例子中，GPIO_PORT是一个硬件寄存器的内存地址，通过将其声明为volatile，确保编译器不会对读写操作进行优化。\n3. 优化编译器优化 在某些情况下，我们可能希望关闭编译器的某些优化，以便更好地进行调试或者对代码进行性能分析。volatile关键字可以在这方面发挥作用。以下是一个示例，展示了如何使用volatile来关闭编译器优化：\n#include volatile int debugFlag = 0; void debugPrint(const char *message) { if (debugFlag) { printf(\"Debug: %s\\n\", message); } } int main() { debugFlag = 1; debugPrint(\"This is a debug message.\"); return 0; } 在这个例子中，debugFlag变量的值是不确定的，因此编译器不会对debugPrint函数进行优化，即使debugFlag在函数调用前被修改。\n4. 指针类型转换 有时候，我们可能需要在指针类型之间进行转换，而编译器会认为这是不安全的操作，从而导致编译错误。使用volatile关键字可以告知编译器，这个类型转换是有意义的，不应该引发错误。以下是一个示例：\n#include int main() { int value = 42; int *volatile volatileIntPtr = \u0026value; void *voidPtr = (void *)volatileIntPtr; int *newValuePtr = (int *)voidPtr; printf(\"New value: %d\\n\", *newValuePtr); return 0; } 在这个例子中，将int指针转换为void指针，然后再转回int指针。在这种情况下，使用volatile关键字可能会更合适，因为编译器不会对void指针的转换进行优化。\n结论 ",
+  "wordCount" : "953",
+  "inLanguage": "zh",
+  "datePublished": "2023-12-29T16:16:59+08:00",
+  "dateModified": "2023-12-29T16:16:59+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "Hanson"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hanson's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hanson-study.netlify.app/img/Q.gif"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://hanson-study.netlify.app/" accesskey="h" title="Hanson&#39;s Blog (Alt + H)">
+            <img src="https://hanson-study.netlify.app/img/Q.gif" alt="logo" aria-label="logo"
+                 height="35">Hanson&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://hanson-study.netlify.app/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/" title="🏠 主页">
+                <span>🏠 主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/tags" title="🧩 标签">
+                <span>🧩 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://hanson-study.netlify.app/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://hanson-study.netlify.app/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/tech/">👨🏻‍💻 技术</a></div>
+            <h1 class="post-title">
+                C语言中volatile关键字的高级玩法
+            </h1>
+            <div class="post-description">
+                在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。
+            </div>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2023-12-29
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>953字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>2分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Hanson
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.6.27/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://hanson-study.netlify.app/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId: "https://hanson-reviewapi.netlify.app/.netlify/functions/twikoo", 
+                                region: "ap-guangzhou", 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%9a%84volatile%e5%85%b3%e9%94%ae%e5%ad%97" aria-label="1. 多线程编程中的volatile关键字">1. 多线程编程中的volatile关键字</a></li>
+                <li>
+                    <a href="#2-%e5%b5%8c%e5%85%a5%e5%bc%8f%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%9a%84volatile%e5%85%b3%e9%94%ae%e5%ad%97" aria-label="2. 嵌入式编程中的volatile关键字">2. 嵌入式编程中的volatile关键字</a></li>
+                <li>
+                    <a href="#3-%e4%bc%98%e5%8c%96%e7%bc%96%e8%af%91%e5%99%a8%e4%bc%98%e5%8c%96" aria-label="3. 优化编译器优化">3. 优化编译器优化</a></li>
+                <li>
+                    <a href="#4-%e6%8c%87%e9%92%88%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" aria-label="4. 指针类型转换">4. 指针类型转换</a></li>
+                <li>
+                    <a href="#%e7%bb%93%e8%ae%ba" aria-label="结论">结论</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h2 id="1-多线程编程中的volatile关键字">1. 多线程编程中的volatile关键字<a hidden class="anchor" aria-hidden="true" href="#1-多线程编程中的volatile关键字">#</a></h2>
+<p>最常见的用途之一是在多线程编程中，通过volatile关键字告知编译器不要对变量进行优化，以避免出现意外的行为。例如，在多线程环境中，一个线程可能会修改某个变量，而另一个线程在不知情的情况下使用了这个变量。下面是一个示例，展示了在多线程编程中使用volatile的情况：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;pthread.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">volatile</span> <span style="color:#66d9ef">int</span> sharedValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">threadFunction</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>arg) {
+</span></span><span style="display:flex;"><span>    sharedValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pthread_t</span> <span style="color:#66d9ef">thread</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">thread</span>, NULL, threadFunction, NULL);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (sharedValue <span style="color:#f92672">!=</span> <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 等待线程修改sharedValue
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;sharedValue has been modified.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pthread_join</span>(<span style="color:#66d9ef">thread</span>, NULL);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，sharedValue变量被声明为volatile，这样可以确保在不同线程中的修改能够被及时反映。</p>
+<h2 id="2-嵌入式编程中的volatile关键字">2. 嵌入式编程中的volatile关键字<a hidden class="anchor" aria-hidden="true" href="#2-嵌入式编程中的volatile关键字">#</a></h2>
+<p>在嵌入式编程中，硬件寄存器和内存映射设备常常需要使用volatile关键字，以确保编译器不会对其进行优化，从而保证与硬件的交互是准确的。以下是一个示例，展示了在嵌入式环境中使用volatile关键字的情况：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define GPIO_PORT ((volatile unsigned int *)0x12345678)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>GPIO_PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xFF</span>; <span style="color:#75715e">// 将端口设置为全高电平
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 假设在这里进行了一些与硬件相关的操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>GPIO_PORT; <span style="color:#75715e">// 读取端口的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Value read from GPIO_PORT: %u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, value);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，GPIO_PORT是一个硬件寄存器的内存地址，通过将其声明为volatile，确保编译器不会对读写操作进行优化。</p>
+<h2 id="3-优化编译器优化">3. 优化编译器优化<a hidden class="anchor" aria-hidden="true" href="#3-优化编译器优化">#</a></h2>
+<p>在某些情况下，我们可能希望关闭编译器的某些优化，以便更好地进行调试或者对代码进行性能分析。volatile关键字可以在这方面发挥作用。以下是一个示例，展示了如何使用volatile来关闭编译器优化：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#75715e">#include &lt;stdio.h&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>volatile <span style="color:#a6e22e">int</span> debugFlag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>void debugPrint(<span style="color:#66d9ef">const</span> char <span style="color:#f92672">*</span>message) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (debugFlag) {
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Debug: </span><span style="color:#e6db74">%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, message);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">int</span> main() {
+</span></span><span style="display:flex;"><span>    debugFlag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    debugPrint(<span style="color:#e6db74">&#34;This is a debug message.&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，debugFlag变量的值是不确定的，因此编译器不会对debugPrint函数进行优化，即使debugFlag在函数调用前被修改。</p>
+<h2 id="4-指针类型转换">4. 指针类型转换<a hidden class="anchor" aria-hidden="true" href="#4-指针类型转换">#</a></h2>
+<p>有时候，我们可能需要在指针类型之间进行转换，而编译器会认为这是不安全的操作，从而导致编译错误。使用volatile关键字可以告知编译器，这个类型转换是有意义的，不应该引发错误。以下是一个示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">volatile</span> volatileIntPtr <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>value;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>voidPtr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>)volatileIntPtr;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>newValuePtr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)voidPtr;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;New value: %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>newValuePtr);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>在这个例子中，将int指针转换为void指针，然后再转回int指针。在这种情况下，使用volatile关键字可能会更合适，因为编译器不会对void指针的转换进行优化。</p>
+<h2 id="结论">结论<a hidden class="anchor" aria-hidden="true" href="#结论">#</a></h2>
+
+
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>Html&#43;css实战笔记</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.27/dist/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId: "https://hanson-reviewapi.netlify.app/.netlify/functions/twikoo",
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region: "ap-guangzhou",
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<footer class="footer">
+    <span>
+        Copyright
+        &copy;
+        2021-2023
+        
+        All Rights Reserved
+    </span>
+    
+    
+    <span id="busuanzi_container">
+        <span class="fa fa-user"></span> <span id="busuanzi_value_site_uv"></span>
+        <span class="fa fa-eye"></span> <span id="busuanzi_value_site_pv"></span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent +
+                    '\r\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Hanson's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>
