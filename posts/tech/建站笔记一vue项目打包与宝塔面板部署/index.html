@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>C语言中volatile关键字的高级玩法 | Hanson&#39;s Blog</title>
-<meta name="keywords" content="C语言, 单片机">
-<meta name="description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。">
+<title>建站笔记一：Vue项目打包与宝塔面板部署踩坑记录 | Hanson&#39;s Blog</title>
+<meta name="keywords" content="Vue, 腾讯云, 宝塔面板, 建站">
+<meta name="description" content="Vue项目打包与在利用宝塔面板的部署">
 <meta name="author" content="Hanson">
-<link rel="canonical" href="https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/">
+<link rel="canonical" href="https://hanson-study.netlify.app/posts/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0%E4%B8%80vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%8E%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://hanson-study.netlify.app/img/Q.gif">
@@ -73,16 +73,16 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<meta property="og:title" content="C语言中volatile关键字的高级玩法" />
-<meta property="og:description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。" />
+<meta property="og:title" content="建站笔记一：Vue项目打包与宝塔面板部署踩坑记录" />
+<meta property="og:description" content="Vue项目打包与在利用宝塔面板的部署" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-12-29T16:16:59+08:00" />
-<meta property="article:modified_time" content="2023-12-29T16:16:59+08:00" />
+<meta property="og:url" content="https://hanson-study.netlify.app/posts/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0%E4%B8%80vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%8E%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-27T15:08:16+08:00" />
+<meta property="article:modified_time" content="2024-01-27T15:08:16+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C语言中volatile关键字的高级玩法"/>
-<meta name="twitter:description" content="在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。"/>
+<meta name="twitter:title" content="建站笔记一：Vue项目打包与宝塔面板部署踩坑记录"/>
+<meta name="twitter:description" content="Vue项目打包与在利用宝塔面板的部署"/>
 
 
 <script type="application/ld+json">
@@ -107,8 +107,8 @@ var _hmt = _hmt || [];
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "C语言中volatile关键字的高级玩法",
-      "item": "https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/"
+      "name": "建站笔记一：Vue项目打包与宝塔面板部署踩坑记录",
+      "item": "https://hanson-study.netlify.app/posts/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0%E4%B8%80vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%8E%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2/"
     }
   ]
 }
@@ -117,24 +117,24 @@ var _hmt = _hmt || [];
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "C语言中volatile关键字的高级玩法",
-  "name": "C语言中volatile关键字的高级玩法",
-  "description": "在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。",
+  "headline": "建站笔记一：Vue项目打包与宝塔面板部署踩坑记录",
+  "name": "建站笔记一：Vue项目打包与宝塔面板部署踩坑记录",
+  "description": "Vue项目打包与在利用宝塔面板的部署",
   "keywords": [
-    "C语言", "单片机"
+    "Vue", "腾讯云", "宝塔面板", "建站"
   ],
-  "articleBody": "1. 多线程编程中的volatile关键字 最常见的用途之一是在多线程编程中，通过volatile关键字告知编译器不要对变量进行优化，以避免出现意外的行为。例如，在多线程环境中，一个线程可能会修改某个变量，而另一个线程在不知情的情况下使用了这个变量。下面是一个示例，展示了在多线程编程中使用volatile的情况：\n#include #include volatile int sharedValue = 0; void *threadFunction(void *arg) { sharedValue = 10; return NULL; } int main() { pthread_t thread; pthread_create(\u0026thread, NULL, threadFunction, NULL); while (sharedValue != 10) { // 等待线程修改sharedValue } printf(\"sharedValue has been modified.\\n\"); pthread_join(thread, NULL); return 0; } 在这个例子中，sharedValue变量被声明为volatile，这样可以确保在不同线程中的修改能够被及时反映。\n2. 嵌入式编程中的volatile关键字 在嵌入式编程中，硬件寄存器和内存映射设备常常需要使用volatile关键字，以确保编译器不会对其进行优化，从而保证与硬件的交互是准确的。以下是一个示例，展示了在嵌入式环境中使用volatile关键字的情况：\n#include #define GPIO_PORT ((volatile unsigned int *)0x12345678) int main() { *GPIO_PORT = 0xFF; // 将端口设置为全高电平 // 假设在这里进行了一些与硬件相关的操作 unsigned int value = *GPIO_PORT; // 读取端口的值 printf(\"Value read from GPIO_PORT: %u\\n\", value); return 0; } 在这个例子中，GPIO_PORT是一个硬件寄存器的内存地址，通过将其声明为volatile，确保编译器不会对读写操作进行优化。\n3. 优化编译器优化 在某些情况下，我们可能希望关闭编译器的某些优化，以便更好地进行调试或者对代码进行性能分析。volatile关键字可以在这方面发挥作用。以下是一个示例，展示了如何使用volatile来关闭编译器优化：\n#include volatile int debugFlag = 0; void debugPrint(const char *message) { if (debugFlag) { printf(\"Debug: %s\\n\", message); } } int main() { debugFlag = 1; debugPrint(\"This is a debug message.\"); return 0; } 在这个例子中，debugFlag变量的值是不确定的，因此编译器不会对debugPrint函数进行优化，即使debugFlag在函数调用前被修改。\n4. 指针类型转换 有时候，我们可能需要在指针类型之间进行转换，而编译器会认为这是不安全的操作，从而导致编译错误。使用volatile关键字可以告知编译器，这个类型转换是有意义的，不应该引发错误。以下是一个示例：\n#include int main() { int value = 42; int *volatile volatileIntPtr = \u0026value; void *voidPtr = (void *)volatileIntPtr; int *newValuePtr = (int *)voidPtr; printf(\"New value: %d\\n\", *newValuePtr); return 0; } 在这个例子中，将int指针转换为void指针，然后再转回int指针。在这种情况下，使用volatile关键字可能会更合适，因为编译器不会对void指针的转换进行优化。\n结论 volatile关键字在C语言中有许多高级应用，从多线程编程到嵌入式环境中的硬件交互，再到调试和指针类型转换。通过使用volatile关键字，我们可以告知编译器在某些情况下不要进行优化，从而确保代码的正确性和准确性。本文的示例代码和讲解希望能够帮助读者更好地理解volatile关键字的高级用法，并在实际项目中应用这些概念。\n",
-  "wordCount" : "1115",
+  "articleBody": "Vue项目的打包 在你的Vue项目中运行以下命令\nnpm run dev 或者是在webstorm的package.json运行build 运行之后生成dist文件夹，并对其进行压缩 项目在宝塔面板部署 新建网页 1、登录宝塔面板并新建网站 2、输入域名，例如自己域名或IP地址，可使用默认端口，如不输入端口则使用默认80端口 注意:要在腾讯云中防火墙放行相应端口 3、选择网页内容目录如使用默认的地址可不更改如图所示并点击提交 上传打包文件 1、如图所示并上传压缩包，将压缩包上传到上述选择的目录中 2、右键将其解压，在检查确定解压完整性后将其压缩包删除 访问网站 在地址栏输入自己的IP地址即可访问网站，如自定义端口号，则后面需添加冒号后输入端口号\n踩坑记录 自定义端口号 1、除非特殊情况，要不然使用默认80端口，因为浏览器对端口号进行限制\n一、问题复现 使用自定义105端口对网页进行打开并ERR_UNSAFE_PORT报错 二、解决方案\n1、更换端口 2、改变浏览器安全设置\nGoogle Chrome浏览器 关闭浏览器-\u003e桌面找到浏览器图标-\u003e点击右键选择属性-\u003e在【目标】后追加空格+–explicitly-allowed-ports=10080(见下面配置)-\u003e点击【保存】-\u003e双击图标，重新打开浏览器。\n--explicitly-allowed-ports=10080 Edge浏览器\n搜索栏中输入regedit，回车打开系统注册表，进入计算机\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Edge\\ExplicitlyAllowedNetworkPorts，此路径不一定存在，可自行创建。然后在 ExplicitlyAllowedNetworkPorts 新建一个名称为 1 的字符串值，修改其值为10080。最后重启浏览器，访问端口为10080的地址。 三、部分非安全端口列表\n1, // tcpmux 7, // echo 9, // discard 11, // systat 13, // daytime 15, // netstat 17, // qotd 19, // chargen 20, // ftp data 21, // ftp access 22, // ssh 23, // telnet 25, // smtp 37, // time 42, // name 43, // nicname 53, // domain 77, // priv-rjs 79, // finger 87, // ttylink 95, // supdup 101, // hostriame 102, // iso-tsap 103, // gppitnp 104, // acr-nema 109, // pop2 110, // pop3 111, // sunrpc 113, // auth 115, // sftp 117, // uucp-path 119, // nntp 123, // NTP 135, // loc-srv /epmap 139, // netbios 143, // imap2 179, // BGP 389, // ldap 465, // smtp+ssl 512, // print / exec 513, // login 514, // shell 515, // printer 526, // tempo 530, // courier 531, // chat 532, // netnews 540, // uucp 556, // remotefs 563, // nntp+ssl 587, // stmp? 601, // ?? 636, // ldap+ssl 993, // ldap+ssl 995, // pop3+ssl 2049, // nfs 3659, // apple-sasl / PasswordServer 4045, // lockd 6000, // X11 6665, // Alternate IRC 6666, // Alternate IRC 6667, // Standard IRC 6668, // Alternate IRC 6669, // Alternate IRC 感谢：知乎https://zhuanlan.zhihu.com/p/383077079文章参考\n",
+  "wordCount" : "990",
   "inLanguage": "zh",
-  "datePublished": "2023-12-29T16:16:59+08:00",
-  "dateModified": "2023-12-29T16:16:59+08:00",
+  "datePublished": "2024-01-27T15:08:16+08:00",
+  "dateModified": "2024-01-27T15:08:16+08:00",
   "author":[{
     "@type": "Person",
     "name": "Hanson"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/"
+    "@id": "https://hanson-study.netlify.app/posts/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0%E4%B8%80vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%8E%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2/"
   },
   "publisher": {
     "@type": "Organization",
@@ -240,10 +240,10 @@ var _hmt = _hmt || [];
         <header class="post-header">
             <div class="breadcrumbs"><a href="https://hanson-study.netlify.app/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/tech/">👨🏻‍💻 技术</a></div>
             <h1 class="post-title">
-                C语言中volatile关键字的高级玩法
+                建站笔记一：Vue项目打包与宝塔面板部署踩坑记录
             </h1>
             <div class="post-description">
-                在C语言编程中，volatile是一个重要的关键字，用于告知编译器变量可能会在意料之外被改变，从而避免编译器对该变量的优化。尽管最常见的用途是在多线程编程中，volatile还有一些高级应用。本文将深入探讨volatile关键字的高级应用，提供具体的C语言代码示例并进行讲解。
+                Vue项目打包与在利用宝塔面板的部署
             </div>
             <div class="post-meta">
 
@@ -264,7 +264,7 @@ var _hmt = _hmt || [];
 <span class="parent-post-meta">
     <span id="post_meta_style_1">
         <span class="fa fa-calendar-check-o"></span>
-        <span>2023-12-29
+        <span>2024-01-27
             &nbsp;&nbsp;
         </span>
     </span>
@@ -277,13 +277,13 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>1115字
+        <span>990字
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_4">
         <span class="fa fa-clock-o"></span>
-        <span>3分钟
+        <span>2分钟
             &nbsp;&nbsp;
         </span>
     </span>
@@ -297,6 +297,7 @@ var _hmt = _hmt || [];
         <span class="fa fa-tags" style="opacity: 0.8"></span>
         <span>
             <span class="post-tags-meta">
+                <a href="https://hanson-study.netlify.app/tags/%E5%BB%BA%E7%AB%99/" style="color: var(--secondary)!important;">建站</a>
             </span>
         </span>
     </span>
@@ -358,16 +359,25 @@ var _hmt = _hmt || [];
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#1-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%9a%84volatile%e5%85%b3%e9%94%ae%e5%ad%97" aria-label="1. 多线程编程中的volatile关键字">1. 多线程编程中的volatile关键字</a></li>
+                    <a href="#vue%e9%a1%b9%e7%9b%ae%e7%9a%84%e6%89%93%e5%8c%85" aria-label="Vue项目的打包">Vue项目的打包</a></li>
                 <li>
-                    <a href="#2-%e5%b5%8c%e5%85%a5%e5%bc%8f%e7%bc%96%e7%a8%8b%e4%b8%ad%e7%9a%84volatile%e5%85%b3%e9%94%ae%e5%ad%97" aria-label="2. 嵌入式编程中的volatile关键字">2. 嵌入式编程中的volatile关键字</a></li>
+                    <a href="#%e9%a1%b9%e7%9b%ae%e5%9c%a8%e5%ae%9d%e5%a1%94%e9%9d%a2%e6%9d%bf%e9%83%a8%e7%bd%b2" aria-label="项目在宝塔面板部署">项目在宝塔面板部署</a><ul>
+                        
                 <li>
-                    <a href="#3-%e4%bc%98%e5%8c%96%e7%bc%96%e8%af%91%e5%99%a8%e4%bc%98%e5%8c%96" aria-label="3. 优化编译器优化">3. 优化编译器优化</a></li>
+                    <a href="#%e6%96%b0%e5%bb%ba%e7%bd%91%e9%a1%b5" aria-label="新建网页">新建网页</a></li>
                 <li>
-                    <a href="#4-%e6%8c%87%e9%92%88%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2" aria-label="4. 指针类型转换">4. 指针类型转换</a></li>
+                    <a href="#%e4%b8%8a%e4%bc%a0%e6%89%93%e5%8c%85%e6%96%87%e4%bb%b6" aria-label="上传打包文件">上传打包文件</a></li>
                 <li>
-                    <a href="#%e7%bb%93%e8%ae%ba" aria-label="结论">结论</a>
+                    <a href="#%e8%ae%bf%e9%97%ae%e7%bd%91%e7%ab%99" aria-label="访问网站">访问网站</a></li></ul>
                 </li>
+                <li>
+                    <a href="#%e8%b8%a9%e5%9d%91%e8%ae%b0%e5%bd%95" aria-label="踩坑记录">踩坑记录</a><ul>
+                        
+                <li>
+                    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%ab%af%e5%8f%a3%e5%8f%b7" aria-label="自定义端口号">自定义端口号</a>
+                </li>
+            </ul>
+            </li>
             </ul>
         </div>
         </details>
@@ -433,88 +443,121 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-        <div class="post-content"><h2 id="1-多线程编程中的volatile关键字">1. 多线程编程中的volatile关键字<a hidden class="anchor" aria-hidden="true" href="#1-多线程编程中的volatile关键字">#</a></h2>
-<p>最常见的用途之一是在多线程编程中，通过volatile关键字告知编译器不要对变量进行优化，以避免出现意外的行为。例如，在多线程环境中，一个线程可能会修改某个变量，而另一个线程在不知情的情况下使用了这个变量。下面是一个示例，展示了在多线程编程中使用volatile的情况：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;pthread.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">volatile</span> <span style="color:#66d9ef">int</span> sharedValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">threadFunction</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>arg) {
-</span></span><span style="display:flex;"><span>    sharedValue <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> NULL;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pthread_t</span> <span style="color:#66d9ef">thread</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">thread</span>, NULL, threadFunction, NULL);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (sharedValue <span style="color:#f92672">!=</span> <span style="color:#ae81ff">10</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 等待线程修改sharedValue
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;sharedValue has been modified.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pthread_join</span>(<span style="color:#66d9ef">thread</span>, NULL);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在这个例子中，sharedValue变量被声明为volatile，这样可以确保在不同线程中的修改能够被及时反映。</p>
-<h2 id="2-嵌入式编程中的volatile关键字">2. 嵌入式编程中的volatile关键字<a hidden class="anchor" aria-hidden="true" href="#2-嵌入式编程中的volatile关键字">#</a></h2>
-<p>在嵌入式编程中，硬件寄存器和内存映射设备常常需要使用volatile关键字，以确保编译器不会对其进行优化，从而保证与硬件的交互是准确的。以下是一个示例，展示了在嵌入式环境中使用volatile关键字的情况：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#define GPIO_PORT ((volatile unsigned int *)0x12345678)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>GPIO_PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">0xFF</span>; <span style="color:#75715e">// 将端口设置为全高电平
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 假设在这里进行了一些与硬件相关的操作
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>GPIO_PORT; <span style="color:#75715e">// 读取端口的值
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Value read from GPIO_PORT: %u</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, value);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在这个例子中，GPIO_PORT是一个硬件寄存器的内存地址，通过将其声明为volatile，确保编译器不会对读写操作进行优化。</p>
-<h2 id="3-优化编译器优化">3. 优化编译器优化<a hidden class="anchor" aria-hidden="true" href="#3-优化编译器优化">#</a></h2>
-<p>在某些情况下，我们可能希望关闭编译器的某些优化，以便更好地进行调试或者对代码进行性能分析。volatile关键字可以在这方面发挥作用。以下是一个示例，展示了如何使用volatile来关闭编译器优化：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#75715e">#include &lt;stdio.h&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>volatile <span style="color:#a6e22e">int</span> debugFlag <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>void debugPrint(<span style="color:#66d9ef">const</span> char <span style="color:#f92672">*</span>message) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (debugFlag) {
-</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Debug: </span><span style="color:#e6db74">%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, message);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">int</span> main() {
-</span></span><span style="display:flex;"><span>    debugFlag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    debugPrint(<span style="color:#e6db74">&#34;This is a debug message.&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在这个例子中，debugFlag变量的值是不确定的，因此编译器不会对debugPrint函数进行优化，即使debugFlag在函数调用前被修改。</p>
-<h2 id="4-指针类型转换">4. 指针类型转换<a hidden class="anchor" aria-hidden="true" href="#4-指针类型转换">#</a></h2>
-<p>有时候，我们可能需要在指针类型之间进行转换，而编译器会认为这是不安全的操作，从而导致编译错误。使用volatile关键字可以告知编译器，这个类型转换是有意义的，不应该引发错误。以下是一个示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#66d9ef">volatile</span> volatileIntPtr <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>value;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>voidPtr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>)volatileIntPtr;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>newValuePtr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)voidPtr;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;New value: %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>newValuePtr);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在这个例子中，将int指针转换为void指针，然后再转回int指针。在这种情况下，使用volatile关键字可能会更合适，因为编译器不会对void指针的转换进行优化。</p>
-<h2 id="结论">结论<a hidden class="anchor" aria-hidden="true" href="#结论">#</a></h2>
-<p>volatile关键字在C语言中有许多高级应用，从多线程编程到嵌入式环境中的硬件交互，再到调试和指针类型转换。通过使用volatile关键字，我们可以告知编译器在某些情况下不要进行优化，从而确保代码的正确性和准确性。本文的示例代码和讲解希望能够帮助读者更好地理解volatile关键字的高级用法，并在实际项目中应用这些概念。</p>
+        <div class="post-content"><h2 id="vue项目的打包">Vue项目的打包<a hidden class="anchor" aria-hidden="true" href="#vue项目的打包">#</a></h2>
+<p>在你的Vue项目中运行以下命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><p>或者是在webstorm的package.json运行build
+<img loading="lazy" src="6.png" alt=""  />
+
+运行之后生成dist文件夹，并对其进行压缩
+<img loading="lazy" src="7.png" alt=""  />
+</p>
+<h2 id="项目在宝塔面板部署">项目在宝塔面板部署<a hidden class="anchor" aria-hidden="true" href="#项目在宝塔面板部署">#</a></h2>
+<h3 id="新建网页">新建网页<a hidden class="anchor" aria-hidden="true" href="#新建网页">#</a></h3>
+<p>1、登录宝塔面板并新建网站
+<img loading="lazy" src="1.png" alt=""  />
+
+2、输入域名，例如自己域名或IP地址，可使用默认端口，如不输入端口则使用默认80端口
+<strong>注意:要在腾讯云中防火墙放行相应端口</strong>
+<img loading="lazy" src="4.png" alt=""  />
+
+3、选择网页内容目录如使用默认的地址可不更改如图所示并点击提交
+<img loading="lazy" src="2.png" alt=""  />
+</p>
+<h3 id="上传打包文件">上传打包文件<a hidden class="anchor" aria-hidden="true" href="#上传打包文件">#</a></h3>
+<p>1、如图所示并上传压缩包，将压缩包上传到上述选择的目录中
+<img loading="lazy" src="3.png" alt=""  />
+
+2、右键将其解压，在检查确定解压完整性后将其压缩包删除
+<img loading="lazy" src="5.png" alt=""  />
+</p>
+<h3 id="访问网站">访问网站<a hidden class="anchor" aria-hidden="true" href="#访问网站">#</a></h3>
+<p>在地址栏输入自己的IP地址即可访问网站，如自定义端口号，则后面需添加冒号后输入端口号</p>
+<h2 id="踩坑记录">踩坑记录<a hidden class="anchor" aria-hidden="true" href="#踩坑记录">#</a></h2>
+<h3 id="自定义端口号">自定义端口号<a hidden class="anchor" aria-hidden="true" href="#自定义端口号">#</a></h3>
+<p>1、除非特殊情况，要不然使用默认80端口，因为浏览器对端口号进行限制</p>
+<p><strong>一、问题复现</strong>
+使用自定义105端口对网页进行打开并<em>ERR_UNSAFE_PORT</em>报错
+<img loading="lazy" src="8.png" alt=""  />
+
+<strong>二、解决方案</strong></p>
+<p>1、更换端口
+2、改变浏览器安全设置</p>
+<p><em>Google Chrome浏览器</em>
+关闭浏览器-&gt;桌面找到浏览器图标-&gt;点击右键选择属性-&gt;在【目标】后追加空格+&ndash;explicitly-allowed-ports=10080(见下面配置)-&gt;点击【保存】-&gt;双击图标，重新打开浏览器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>--explicitly-allowed-ports=10080
+</span></span></code></pre></div><p><img loading="lazy" src="9.png" alt=""  />
+
+<em>Edge浏览器</em></p>
+<p>搜索栏中输入regedit，回车打开系统注册表，进入计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExplicitlyAllowedNetworkPorts，此路径不一定存在，可自行创建。然后在 ExplicitlyAllowedNetworkPorts 新建一个名称为 1 的字符串值，修改其值为10080。最后重启浏览器，访问端口为10080的地址。
+<img loading="lazy" src="9.png" alt=""  />
+
+<strong>三、部分非安全端口列表</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>  1,    // tcpmux
+</span></span><span style="display:flex;"><span>  7,    // echo
+</span></span><span style="display:flex;"><span>  9,    // discard
+</span></span><span style="display:flex;"><span>  11,   // systat
+</span></span><span style="display:flex;"><span>  13,   // daytime
+</span></span><span style="display:flex;"><span>  15,   // netstat
+</span></span><span style="display:flex;"><span>  17,   // qotd
+</span></span><span style="display:flex;"><span>  19,   // chargen
+</span></span><span style="display:flex;"><span>  20,   // ftp data
+</span></span><span style="display:flex;"><span>  21,   // ftp access
+</span></span><span style="display:flex;"><span>  22,   // ssh
+</span></span><span style="display:flex;"><span>  23,   // telnet
+</span></span><span style="display:flex;"><span>  25,   // smtp
+</span></span><span style="display:flex;"><span>  37,   // time
+</span></span><span style="display:flex;"><span>  42,   // name
+</span></span><span style="display:flex;"><span>  43,   // nicname
+</span></span><span style="display:flex;"><span>  53,   // domain
+</span></span><span style="display:flex;"><span>  77,   // priv-rjs
+</span></span><span style="display:flex;"><span>  79,   // finger
+</span></span><span style="display:flex;"><span>  87,   // ttylink
+</span></span><span style="display:flex;"><span>  95,   // supdup
+</span></span><span style="display:flex;"><span>  101,  // hostriame
+</span></span><span style="display:flex;"><span>  102,  // iso-tsap
+</span></span><span style="display:flex;"><span>  103,  // gppitnp
+</span></span><span style="display:flex;"><span>  104,  // acr-nema
+</span></span><span style="display:flex;"><span>  109,  // pop2
+</span></span><span style="display:flex;"><span>  110,  // pop3
+</span></span><span style="display:flex;"><span>  111,  // sunrpc
+</span></span><span style="display:flex;"><span>  113,  // auth
+</span></span><span style="display:flex;"><span>  115,  // sftp
+</span></span><span style="display:flex;"><span>  117,  // uucp-path
+</span></span><span style="display:flex;"><span>  119,  // nntp
+</span></span><span style="display:flex;"><span>  123,  // NTP
+</span></span><span style="display:flex;"><span>  135,  // loc-srv /epmap
+</span></span><span style="display:flex;"><span>  139,  // netbios
+</span></span><span style="display:flex;"><span>  143,  // imap2
+</span></span><span style="display:flex;"><span>  179,  // BGP
+</span></span><span style="display:flex;"><span>  389,  // ldap
+</span></span><span style="display:flex;"><span>  465,  // smtp+ssl
+</span></span><span style="display:flex;"><span>  512,  // print / exec
+</span></span><span style="display:flex;"><span>  513,  // login
+</span></span><span style="display:flex;"><span>  514,  // shell
+</span></span><span style="display:flex;"><span>  515,  // printer
+</span></span><span style="display:flex;"><span>  526,  // tempo
+</span></span><span style="display:flex;"><span>  530,  // courier
+</span></span><span style="display:flex;"><span>  531,  // chat
+</span></span><span style="display:flex;"><span>  532,  // netnews
+</span></span><span style="display:flex;"><span>  540,  // uucp
+</span></span><span style="display:flex;"><span>  556,  // remotefs
+</span></span><span style="display:flex;"><span>  563,  // nntp+ssl
+</span></span><span style="display:flex;"><span>  587,  // stmp?
+</span></span><span style="display:flex;"><span>  601,  // ??
+</span></span><span style="display:flex;"><span>  636,  // ldap+ssl
+</span></span><span style="display:flex;"><span>  993,  // ldap+ssl
+</span></span><span style="display:flex;"><span>  995,  // pop3+ssl
+</span></span><span style="display:flex;"><span>  2049, // nfs
+</span></span><span style="display:flex;"><span>  3659, // apple-sasl / PasswordServer
+</span></span><span style="display:flex;"><span>  4045, // lockd
+</span></span><span style="display:flex;"><span>  6000, // X11
+</span></span><span style="display:flex;"><span>  6665, // Alternate IRC
+</span></span><span style="display:flex;"><span>  6666, // Alternate IRC
+</span></span><span style="display:flex;"><span>  6667, // Standard IRC
+</span></span><span style="display:flex;"><span>  6668, // Alternate IRC
+</span></span><span style="display:flex;"><span>  6669, // Alternate IRC
+</span></span></code></pre></div><p>感谢：知乎https://zhuanlan.zhihu.com/p/383077079文章参考</p>
 
 
         </div>
@@ -522,15 +565,10 @@ var _hmt = _hmt || [];
         <footer class="post-footer">
             
 <nav class="paginav">
-  <a class="prev" href="https://hanson-study.netlify.app/posts/tech/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0%E4%B8%80vue%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E4%B8%8E%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2/">
-    <span class="title">« 上一页</span>
-    <br>
-    <span>建站笔记一：Vue项目打包与宝塔面板部署踩坑记录</span>
-  </a>
-  <a class="next" href="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/">
+  <a class="next" href="https://hanson-study.netlify.app/posts/tech/c%E8%AF%AD%E8%A8%80%E4%B8%ADvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E9%AB%98%E7%BA%A7%E7%8E%A9%E6%B3%95/">
     <span class="title">下一页 »</span>
     <br>
-    <span>Html&#43;css实战笔记</span>
+    <span>C语言中volatile关键字的高级玩法</span>
   </a>
 </nav>
 
