@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Html&#43;css实战笔记 | Hanson&#39;s Blog</title>
+<title>HTML&#43;CSS实战笔记 | Hanson&#39;s Blog</title>
 <meta name="keywords" content="Html, Css, 前端">
 <meta name="description" content="前端html&#43;css的学习笔记">
-<meta name="author" content="郑文玲">
+<meta name="author" content="Kawynn">
 <link rel="canonical" href="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
@@ -73,7 +73,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<meta property="og:title" content="Html&#43;css实战笔记" />
+<meta property="og:title" content="HTML&#43;CSS实战笔记" />
 <meta property="og:description" content="前端html&#43;css的学习笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hanson-study.netlify.app/posts/tech/html&#43;css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="posts" />
@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
 <meta property="article:modified_time" content="2023-12-14T15:14:57+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Html&#43;css实战笔记"/>
+<meta name="twitter:title" content="HTML&#43;CSS实战笔记"/>
 <meta name="twitter:description" content="前端html&#43;css的学习笔记"/>
 
 
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "Html+css实战笔记",
+      "name": "HTML+CSS实战笔记",
       "item": "https://hanson-study.netlify.app/posts/tech/html+css%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/"
     }
   ]
@@ -117,20 +117,20 @@ var _hmt = _hmt || [];
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Html+css实战笔记",
-  "name": "Html\u002bcss实战笔记",
+  "headline": "HTML+CSS实战笔记",
+  "name": "HTML\u002bCSS实战笔记",
   "description": "前端html+css的学习笔记",
   "keywords": [
     "Html", "Css", "前端"
   ],
-  "articleBody": "一、html实战笔记 1、MDN前端神书 (html和css都有，各种各样的) 直接百度官方搜索，有文档\n2、Tailwind CSS 3、Bootstrap 4、W3school 5、easyicon（javaSwing那块知道的） 2、三大标签元素以及setion标签的了解 /* 转换成块元素，才可设置高度 */\ndisplay: block;\n很多人经常会把块元素、行内块元素、行内元素的知识混淆掉，今天我归纳下，做个小结：\n1、块元素独占一行，而行内块元素和行内元素可以和别人共处一行；\n2、常见的块元素有div、p、h1、ol、ul、dl、tabel、form；\n3、常见的行内元素有a、span、i、strong、em、label、cite、code；\n4、常见的行内块元素有img、input、select、textarea、button；\n5、行内块元素的特性和块元素完全一样，除了一点：它不独占一行；\n6、块元素、行内块、行内元素都有各自的盒模型。三者的盒模型有相同的地方，也有不同的地方；\n7、行内元素不能设置“width”和“height”，块元素和行内块元素可以设置“width”和“height”；\n8、行内元素在水平方向上的padding、border、margin的特性和块元素一模一样；\n9、行内元素在垂直方向上的padding、border、margin的特性和块元素很不一样：padding和border可以设置，但是不参与布局；margin设置都不能设置；\n10、行内元素不能包含块元素，除了a元素； 11、行内元素可以包含别的行内元素；\n12、行内元素脱离文档流后，会变成块元素；\n13、可以给行内元素设置背景图片（“background-image”）；\n14、块元素的宽默认是父元素宽的100%，高由内容撑起来；\n15、行内元素的宽和高都由内容撑起来；\n16、其实块元素、行内块元素、行内元素之间可以互换，只需要给display属性赋不同的值（block、inline-block、inline）就可以了。\n3、html5自定义标签名 这说明，浏览器对待自定义元素，就像对待标准元素一样，只是没有默认的样式和行为。这种处理方式是写入 HTML5 标准的。\n“自定义元素的名字必须包含一个破折号（-）\n所以、和都是正确的名字\n而和是不正确的。这样的限制使得 HTML 解析器可以分辨那些是标准元素，哪些是自定义元素。”\n4、header标签 这个标签里面必须包含一个h1之类的标题标签\n响应式布局、自适应布局 bookstrap响应式框架的网站：页面窗口拉大拉小显示页面内容的其中一些\n在不同情况下rem是有一个缩放功能\n宽度和高度都不要写死\npx写死\nrem写活 %写活\n设备的划分情况为：\n小于768的为超小屏幕（手机）\n768~992之间的为小屏设备（平板）\n992~1200的中等屏幕（桌面显示器）\n大于1200的宽屏设备（大桌面显示器）\n实现网页自适应不同尺寸 屏幕（PC端） 其中1920就是UI设计稿提供的宽度，这样就算是屏幕不是1920也可以根据比例放大缩小，实现百分百还原设计稿。\n​ 对应的css样式中 1rem=100px; 根据设计稿效果还原即可\n基于等比缩放的大屏自适应方案 html页面如何不同设备自适应缩放比例 width=device-width ：表示宽度是设备屏幕的宽度 height=device-height ：表示宽度是设备屏幕的宽度 initial-scale=1.0：表示初始的缩放比例(初始规模为1.0倍，即原始大小) minimum-scale=0.5：表示最小的缩放比例 maximum-scale=2.0：表示最大的缩放比例 user-scalable=yes或者1：表示用户是否可以调整缩放比例(no或者0：表示不可调整缩放比例) target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。\nUI设计稿和电脑屏幕尺寸不同 前端页面在PC端不同分辨率屏幕的适配—-比例缩放\n通常UI提供PC端项目的设计稿尺寸都是1920*1080(16:9)的，但是电脑显示屏的分辨率是不固定的，所以按照这个固定像素做出来的前端页面在不同的显示屏上可能会出现页面显示不全或者是页面无法充满屏幕的情况。此时，“人美心善”的客户就会提出要求，要让页面充满屏幕。\n作者：罖卋罖 链接：https://juejin.cn/post/7083702725690523685 来源：稀土掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n【马面案例】 后面学到vue会有更多的适配方案\n初始化CSS样式 各种基本网页都会有的\n如何让小盒子在大盒子中垂直和水平居中 只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可 在小盒子样式中写{ height: line-height: } 页面布局及设备适配【千锋教育】 （不管分配率怎么变，布局都不会乱是不是）\n100%布局（弹性布局）：不管分辨率怎么改变，位置都不会变，屏幕大间距也大文字大小也变化，会比例失调\n“拉勾”案例\nrem布局（等比例缩放布局）：\n“网易”案例\nrem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位 html { font-size: 16px; } 如果需要动态的对html的字体进行改变，就需要通过js进行操作 web端单位：px是写死的单位大小\n移动端单位：是比例\n通过vm实现移动端页面实战布局\n拉勾网实战 PC端转化成手机端\n如何获取设计稿\n点击上图两个，这是就可以直接下载设计稿了，用PS是打开\nPC端转移动端问题\n不可以双击放大了\n关闭ul自带的小圆点、取消列表项的样式\n关闭img自带的边框、取消图片下边的留白\na标签的下划线给取消掉\n取消input标签的外边线\n再添加上窗口自适应\n同时让body容器去触发弹性盒子，触发弹性盒子之后修改主轴方向就好了\n利用弹性盒子内容完成布局就可以\n1、设计稿出自于哪个屏幕 用PS测量得得到宽度为1920px（像素）就知道出自于哪个屏幕了，就可以得到设备像素比必然是巴拉，也就是dpr=巴拉\n2、头部导航 也就相当于，从设计稿里每次测量的物理像素都需要把dpr除掉\n【在这开始，之后的所有盒子大小尺寸都要设置成 物理像素/dpr （px）】\n但是你给了一个固定的宽度，让宽度自适应，始终占屏幕的一整行（这里的宽度可以注释掉）\n设置文本水平居中对齐 text-align:center，然后设置height和line-height高度一样\n触发弹性盒子display:flex，再设置里面的两个小盒子两端贴边对齐 justify-content:space-between;，想让左边和右边都有间距，设置大盒子的内边距padding:0px 17px;（上下、左右），再让文本垂直居中对齐（设置height和line-height高度一样）\n找到大盒子(nav)中的第一个小盒子(span)\nnav\u003espan:nth-child(1){巴拉巴拉样式}\n3、主体区域布局 让大盒子中的几个小盒子在一行内显示 display:flex;\n占剩余宽度或者剩余高度的所有用 flex:1;\n4、尾部区域 打底裤实战（rem布局） 1、认识一些单位 屏幕切换成横屏，vmin在最小值的那一个方向作为参照物，所以在这里屏幕切换时，红条的高度不变\n2、开始布局 3、导航区域 主轴上对齐，两端环绕，还有flex:1;实现\n接下来用两端对齐完成\n4、主体区域 flex-wrap:wrap 一行放不下了，必要时可以自动换行 5、flexble.js布局 PC端页面如何适配不同屏幕大小 PC端页面适应不同分辨率\n（1）如何进行PC端多屏适配 （2）多屏适配的几种方法： 使用媒体查询，如 bootstrap等框架 制作设计图的时候，给一个固定的宽度，如1200，背景使用纯色，或者大背景图 使用rem 其他 这里介绍一下 rem 适配方案：\n能够流畅的适配不同分辨率的屏幕，并且开发效率跟使用px开发没什么区别，只是多了将px转化成rem的css函数\n效果图如下（可以看到在不同的分辨率下，依然可以保持较好的布局）：\n（3）使用上述方案的步骤： 1、根据设计稿算出 px转化成rem 的缩放比（这里我的设计稿是 1920px，然后上面导航栏的字体大小为34px，所以都以这个为基准，算出缩放比为 56.47，然后反过来除就等于导航栏字体大小，其他的图片、文字、div都按照这个去算，不懂得自己动手敲一遍，然后使用px的地方用这个函数代替就好了，这里使用的是 scss）\n$ratio: 1920 / 56.47; // 缩放比 34 // 返回对应屏幕下的rem值 @function px2rem($px){ @return $px / $ratio + rem } 2、样式\n样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）： .title { position: absolute; top: px2rem(70); color: $title-color; font-size: $font-size-title; } 3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化\n\u003cscript\u003e // 获取当前设备的宽度，设置rem的根字体大小 let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width const htmlObj = document.getElementsByTagName('html')[0] htmlObj.style.fontSize = width / 56.47 + 'px' // 对resize事件进行浏览器兼容处理 if(document.createEvent) { var event = document.createEvent(\"HTMLEvents\"); event.initEvent(\"resize\", true, true); window.dispatchEvent(event); } else if(document.createEventObject) { window.fireEvent(\"onresize\"); } // 监听页面resize事件，重新设置rem的根字体大小 window.onresize = function() { let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width htmlObj.style.fontSize = width / 56.47 + 'px' }; \u003c/script\u003e flexible代码 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003ctitle\u003e版心布局\u003c/title\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no\"\u003e \u003cscript\u003e (function flexible(window, document) { var docEl = document.documentElement; var dpr = window.devicePixelRatio || 1; function setBodyFontSize() { if (document.body) { document.body.style.fontSize = 12 * dpr + \"px\"; } else { document.addEventListener(\"DOMContentLoaded\", setBodyFontSize); } } setBodyFontSize(); function setRemUnit() { var rem = docEl.clientWidth / 10; docEl.style.fontSize = rem + \"px\"; } setRemUnit(); window.addEventListener(\"resize\", setRemUnit); window.addEventListener(\"pageshow\", function (e) { if (e.persisted) { setRemUnit(); } }); if (dpr \u003e= 2) { var fakeBody = document.createElement(\"body\"); var testElement = document.createElement(\"div\"); testElement.style.border = \".5px solid transparent\"; fakeBody.appendChild(testElement); docEl.appendChild(fakeBody); if (testElement.offsetHeight === 1) { docEl.classList.add(\"hairlines\"); } docEl.removeChild(fakeBody); } })(window, document); \u003c/script\u003e \u003cstyle\u003e * { margin: 0; padding: 0; box-sizing: border-box; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv\u003e \u003c/div\u003e \u003cscript\u003e window.onload = function () { setFont(); window.addEventListener(\"resize\", function () { setFont(); }) function setFont() { var div = document.querySelector(\"div\"); div.style.fontSize = document.querySelector(\"html\").style.fontSize; div.innerHTML = \"html的字体大小为\" + document.querySelector(\"html\").style.fontSize; } } \u003c/script\u003e \u003c/body\u003e \u003c/html\u003e 二、CSS 1、padding四个值的顺序 2、margin四个值的顺序 3、transform:translate()方法 默认情况下，坐标轴原点为屏幕的左上角\n结论：当移动的数是正数时，在Y轴方向上，相对原来的位置向下移动，在X轴方向上，相对原来的位置向右移动。\n结论：当移动的数是负数时，在Y轴方向上，相对原来的位置向上移动，在X轴方向上，相对原来的位置向左移动。\n实战代码，先改变了坐标轴原点，再写偏移位置 top: 50%; left: 50%; transform: translate(-50%, -50%); //弹性布局，垂直水平居中 display: flex; flex-wrap: wrap; align-items: center; justify-content: center; 4、CSS实现盒子水平居中、垂直居中和水平垂直都居中 5、高级的边框样式 （1）颜色 ::v-deep .el-input__inner { background-color: transparent !important; border-color:#80ffff; box-shadow: 1px 1px 5px 1px RGB(128,255,255,0.8) inset; height: 30px; } （2）box-sizing: border-box; 解决CSS中padding（内边距）margin（外边距）撑大盒子的问题 拓展 box-sizing: content-box（为内容的宽高）（实际上,还有padding+边框+margin撑大盒子） |border-box（为内容+padding+边框的总宽高） |inherit（从父元素继承 box-sizing 属性）; ",
-  "wordCount" : "4466",
+  "articleBody": "一、html实战笔记 1、MDN前端神书 (html和css都有，各种各样的) 直接百度官方搜索，有文档\n2、Tailwind CSS 3、Bootstrap 4、W3school 5、easyicon（javaSwing那块知道的） 2、三大标签元素以及setion标签的了解 /* 转换成块元素，才可设置高度 */\ndisplay: block;\n很多人经常会把块元素、行内块元素、行内元素的知识混淆掉，今天我归纳下，做个小结：\n1、块元素独占一行，而行内块元素和行内元素可以和别人共处一行；\n2、常见的块元素有div、p、h1、ol、ul、dl、tabel、form；\n3、常见的行内元素有a、span、i、strong、em、label、cite、code；\n4、常见的行内块元素有img、input、select、textarea、button；\n5、行内块元素的特性和块元素完全一样，除了一点：它不独占一行；\n6、块元素、行内块、行内元素都有各自的盒模型。三者的盒模型有相同的地方，也有不同的地方；\n7、行内元素不能设置“width”和“height”，块元素和行内块元素可以设置“width”和“height”；\n8、行内元素在水平方向上的padding、border、margin的特性和块元素一模一样；\n9、行内元素在垂直方向上的padding、border、margin的特性和块元素很不一样：padding和border可以设置，但是不参与布局；margin设置都不能设置；\n10、行内元素不能包含块元素，除了a元素； 11、行内元素可以包含别的行内元素；\n12、行内元素脱离文档流后，会变成块元素；\n13、可以给行内元素设置背景图片（“background-image”）；\n14、块元素的宽默认是父元素宽的100%，高由内容撑起来；\n15、行内元素的宽和高都由内容撑起来；\n16、其实块元素、行内块元素、行内元素之间可以互换，只需要给display属性赋不同的值（block、inline-block、inline）就可以了。\n3、html5自定义标签名 这说明，浏览器对待自定义元素，就像对待标准元素一样，只是没有默认的样式和行为。这种处理方式是写入 HTML5 标准的。\n“自定义元素的名字必须包含一个破折号（-）\n所以、和都是正确的名字\n而和是不正确的。这样的限制使得 HTML 解析器可以分辨那些是标准元素，哪些是自定义元素。”\n4、header标签 这个标签里面必须包含一个h1之类的标题标签\n响应式布局、自适应布局 bookstrap响应式框架的网站：页面窗口拉大拉小显示页面内容的其中一些\n在不同情况下rem是有一个缩放功能\n宽度和高度都不要写死\npx写死\nrem写活 %写活\n设备的划分情况为：\n小于768的为超小屏幕（手机）\n768~992之间的为小屏设备（平板）\n992~1200的中等屏幕（桌面显示器）\n大于1200的宽屏设备（大桌面显示器）\n实现网页自适应不同尺寸 屏幕（PC端） 其中1920就是UI设计稿提供的宽度，这样就算是屏幕不是1920也可以根据比例放大缩小，实现百分百还原设计稿。\n​ 对应的css样式中 1rem=100px; 根据设计稿效果还原即可\n基于等比缩放的大屏自适应方案 html页面如何不同设备自适应缩放比例 width=device-width ：表示宽度是设备屏幕的宽度 height=device-height ：表示宽度是设备屏幕的宽度 initial-scale=1.0：表示初始的缩放比例(初始规模为1.0倍，即原始大小) minimum-scale=0.5：表示最小的缩放比例 maximum-scale=2.0：表示最大的缩放比例 user-scalable=yes或者1：表示用户是否可以调整缩放比例(no或者0：表示不可调整缩放比例) target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通常定义为每英寸点的数量（dpi）。Android支持三种屏幕像素密度：低像素密度，中像素密度，高像素密度。一个低像素密度的屏幕每英寸上的像素点更少，而一个高像素密度的屏幕每英寸上的像素点更多。Android Browser和WebView默认屏幕为中像素密度。\nUI设计稿和电脑屏幕尺寸不同 前端页面在PC端不同分辨率屏幕的适配—-比例缩放\n通常UI提供PC端项目的设计稿尺寸都是1920*1080(16:9)的，但是电脑显示屏的分辨率是不固定的，所以按照这个固定像素做出来的前端页面在不同的显示屏上可能会出现页面显示不全或者是页面无法充满屏幕的情况。此时，“人美心善”的客户就会提出要求，要让页面充满屏幕。\n作者：罖卋罖 链接：https://juejin.cn/post/7083702725690523685 来源：稀土掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n【马面案例】 后面学到vue会有更多的适配方案\n初始化CSS样式 各种基本网页都会有的\n如何让小盒子在大盒子中垂直和水平居中 1 2 3 4 5 只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可 在小盒子样式中写{ height: line-height: } 页面布局及设备适配【千锋教育】 （不管分配率怎么变，布局都不会乱是不是）\n100%布局（弹性布局）：不管分辨率怎么改变，位置都不会变，屏幕大间距也大文字大小也变化，会比例失调\n“拉勾”案例\nrem布局（等比例缩放布局）：\n“网易”案例\n1 2 3 4 5 6 7 rem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位 html { font-size: 16px; } 如果需要动态的对html的字体进行改变，就需要通过js进行操作 web端单位：px是写死的单位大小\n移动端单位：是比例\n通过vm实现移动端页面实战布局\n拉勾网实战 PC端转化成手机端\n如何获取设计稿\n点击上图两个，这是就可以直接下载设计稿了，用PS是打开\nPC端转移动端问题\n不可以双击放大了\n关闭ul自带的小圆点、取消列表项的样式\n关闭img自带的边框、取消图片下边的留白\na标签的下划线给取消掉\n取消input标签的外边线\n再添加上窗口自适应\n同时让body容器去触发弹性盒子，触发弹性盒子之后修改主轴方向就好了\n利用弹性盒子内容完成布局就可以\n1、设计稿出自于哪个屏幕 用PS测量得得到宽度为1920px（像素）就知道出自于哪个屏幕了，就可以得到设备像素比必然是巴拉，也就是dpr=巴拉\n2、头部导航 也就相当于，从设计稿里每次测量的物理像素都需要把dpr除掉\n【在这开始，之后的所有盒子大小尺寸都要设置成 物理像素/dpr （px）】\n但是你给了一个固定的宽度，让宽度自适应，始终占屏幕的一整行（这里的宽度可以注释掉）\n设置文本水平居中对齐 text-align:center，然后设置height和line-height高度一样\n触发弹性盒子display:flex，再设置里面的两个小盒子两端贴边对齐 justify-content:space-between;，想让左边和右边都有间距，设置大盒子的内边距padding:0px 17px;（上下、左右），再让文本垂直居中对齐（设置height和line-height高度一样）\n找到大盒子(nav)中的第一个小盒子(span)\nnav\u003espan:nth-child(1){巴拉巴拉样式}\n3、主体区域布局 让大盒子中的几个小盒子在一行内显示 display:flex;\n占剩余宽度或者剩余高度的所有用 flex:1;\n4、尾部区域 打底裤实战（rem布局） 1、认识一些单位 屏幕切换成横屏，vmin在最小值的那一个方向作为参照物，所以在这里屏幕切换时，红条的高度不变\n2、开始布局 3、导航区域 主轴上对齐，两端环绕，还有flex:1;实现\n接下来用两端对齐完成\n4、主体区域 1 flex-wrap:wrap 一行放不下了，必要时可以自动换行 5、flexble.js布局 PC端页面如何适配不同屏幕大小 PC端页面适应不同分辨率\n（1）如何进行PC端多屏适配 （2）多屏适配的几种方法： 使用媒体查询，如 bootstrap等框架 制作设计图的时候，给一个固定的宽度，如1200，背景使用纯色，或者大背景图 使用rem 其他 这里介绍一下 rem 适配方案：\n能够流畅的适配不同分辨率的屏幕，并且开发效率跟使用px开发没什么区别，只是多了将px转化成rem的css函数\n效果图如下（可以看到在不同的分辨率下，依然可以保持较好的布局）：\n（3）使用上述方案的步骤： 1、根据设计稿算出 px转化成rem 的缩放比（这里我的设计稿是 1920px，然后上面导航栏的字体大小为34px，所以都以这个为基准，算出缩放比为 56.47，然后反过来除就等于导航栏字体大小，其他的图片、文字、div都按照这个去算，不懂得自己动手敲一遍，然后使用px的地方用这个函数代替就好了，这里使用的是 scss）\n1 2 3 4 5 6 $ratio: 1920 / 56.47; // 缩放比 34 // 返回对应屏幕下的rem值 @function px2rem($px){ @return $px / $ratio + rem } 2、样式\n1 2 3 4 5 6 7 8 样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）： .title { position: absolute; top: px2rem(70); color: $title-color; font-size: $font-size-title; } 3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 \u003cscript\u003e // 获取当前设备的宽度，设置rem的根字体大小 let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width const htmlObj = document.getElementsByTagName('html')[0] htmlObj.style.fontSize = width / 56.47 + 'px' // 对resize事件进行浏览器兼容处理 if(document.createEvent) { var event = document.createEvent(\"HTMLEvents\"); event.initEvent(\"resize\", true, true); window.dispatchEvent(event); } else if(document.createEventObject) { window.fireEvent(\"onresize\"); } // 监听页面resize事件，重新设置rem的根字体大小 window.onresize = function() { let width = window.innerWidth width = width \u003c= 1200 ? 1200 : width htmlObj.style.fontSize = width / 56.47 + 'px' }; \u003c/script\u003e 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 flexible代码 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003ctitle\u003e版心布局\u003c/title\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no\"\u003e \u003cscript\u003e (function flexible(window, document) { var docEl = document.documentElement; var dpr = window.devicePixelRatio || 1; function setBodyFontSize() { if (document.body) { document.body.style.fontSize = 12 * dpr + \"px\"; } else { document.addEventListener(\"DOMContentLoaded\", setBodyFontSize); } } setBodyFontSize(); function setRemUnit() { var rem = docEl.clientWidth / 10; docEl.style.fontSize = rem + \"px\"; } setRemUnit(); window.addEventListener(\"resize\", setRemUnit); window.addEventListener(\"pageshow\", function (e) { if (e.persisted) { setRemUnit(); } }); if (dpr \u003e= 2) { var fakeBody = document.createElement(\"body\"); var testElement = document.createElement(\"div\"); testElement.style.border = \".5px solid transparent\"; fakeBody.appendChild(testElement); docEl.appendChild(fakeBody); if (testElement.offsetHeight === 1) { docEl.classList.add(\"hairlines\"); } docEl.removeChild(fakeBody); } })(window, document); \u003c/script\u003e \u003cstyle\u003e * { margin: 0; padding: 0; box-sizing: border-box; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv\u003e \u003c/div\u003e \u003cscript\u003e window.onload = function () { setFont(); window.addEventListener(\"resize\", function () { setFont(); }) function setFont() { var div = document.querySelector(\"div\"); div.style.fontSize = document.querySelector(\"html\").style.fontSize; div.innerHTML = \"html的字体大小为\" + document.querySelector(\"html\").style.fontSize; } } \u003c/script\u003e \u003c/body\u003e \u003c/html\u003e 二、CSS 1、padding四个值的顺序 2、margin四个值的顺序 3、transform:translate()方法 默认情况下，坐标轴原点为屏幕的左上角\n结论：当移动的数是正数时，在Y轴方向上，相对原来的位置向下移动，在X轴方向上，相对原来的位置向右移动。\n结论：当移动的数是负数时，在Y轴方向上，相对原来的位置向上移动，在X轴方向上，相对原来的位置向左移动。\n1 2 3 4 5 6 7 8 9 10 11 实战代码，先改变了坐标轴原点，再写偏移位置 top: 50%; left: 50%; transform: translate(-50%, -50%); //弹性布局，垂直水平居中 display: flex; flex-wrap: wrap; align-items: center; justify-content: center; 4、CSS实现盒子水平居中、垂直居中和水平垂直都居中 5、高级的边框样式 （1）颜色 1 2 3 4 5 6 ::v-deep .el-input__inner { background-color: transparent !important; border-color:#80ffff; box-shadow: 1px 1px 5px 1px RGB(128,255,255,0.8) inset; height: 30px; } （2）box-sizing: border-box; 1 2 3 4 5 6 7 解决CSS中padding（内边距）margin（外边距）撑大盒子的问题 拓展 box-sizing: content-box（为内容的宽高）（实际上,还有padding+边框+margin撑大盒子） |border-box（为内容+padding+边框的总宽高） |inherit（从父元素继承 box-sizing 属性）; ",
+  "wordCount" : "4580",
   "inLanguage": "zh",
   "datePublished": "2023-12-14T15:14:57+08:00",
   "dateModified": "2023-12-14T15:14:57+08:00",
   "author":[{
     "@type": "Person",
-    "name": "郑文玲"
+    "name": "Kawynn"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -214,6 +214,11 @@ var _hmt = _hmt || [];
                 </a>
             </li>
             <li>
+                <a href="https://hanson-study.netlify.app/posts" title="📚 文章">
+                <span>📚 文章</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://hanson-study.netlify.app/tags" title="🧩 标签">
                 <span>🧩 标签</span>
                 </a>
@@ -240,7 +245,7 @@ var _hmt = _hmt || [];
         <header class="post-header">
             <div class="breadcrumbs"><a href="https://hanson-study.netlify.app/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://hanson-study.netlify.app/posts/tech/">👨🏻‍💻 技术</a></div>
             <h1 class="post-title">
-                Html&#43;css实战笔记
+                HTML&#43;CSS实战笔记
             </h1>
             <div class="post-description">
                 前端html&#43;css的学习笔记
@@ -277,19 +282,19 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>4466字
+        <span>4580字
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_4">
         <span class="fa fa-clock-o"></span>
-        <span>9分钟
+        <span>10分钟
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_5">
         <span class="fa fa-user-o"></span>
-        <span>郑文玲
+        <span>Kawynn
             &nbsp;&nbsp;
         </span>
     </span>
@@ -600,12 +605,23 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 <h3 id="如何让小盒子在大盒子中垂直和水平居中">如何让小盒子在大盒子中垂直和水平居中<a hidden class="anchor" aria-hidden="true" href="#如何让小盒子在大盒子中垂直和水平居中">#</a></h3>
 <p><img loading="lazy" src="image-20230913205525761.png" alt="image-20230913205525761"  />
 </p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>只有一行，要来实现小盒子在大盒子中上下居中效果让height=line-height即可
 </span></span><span style="display:flex;"><span>在小盒子样式中写{
 </span></span><span style="display:flex;"><span>height:
 </span></span><span style="display:flex;"><span>line-height:
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="页面布局及设备适配千锋教育">页面布局及设备适配【千锋教育】<a hidden class="anchor" aria-hidden="true" href="#页面布局及设备适配千锋教育">#</a></h3>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="页面布局及设备适配千锋教育">页面布局及设备适配【千锋教育】<a hidden class="anchor" aria-hidden="true" href="#页面布局及设备适配千锋教育">#</a></h3>
 <p>（不管分配率怎么变，布局都不会乱是不是）</p>
 <p>100%布局（弹性布局）：不管分辨率怎么改变，位置都不会变，屏幕大间距也大文字大小也变化，会比例失调</p>
 <p>“拉勾”案例</p>
@@ -615,14 +631,27 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 <p>“网易”案例</p>
 <p><img loading="lazy" src="image-20230913221921699.png" alt="image-20230913221921699"  />
 </p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rem是根据html的字体（根元素大小）变化而动态变化的，rem是一个相对单位
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>html {
 </span></span><span style="display:flex;"><span>	font-size: 16px;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>        
 </span></span><span style="display:flex;"><span>如果需要动态的对html的字体进行改变，就需要通过js进行操作
-</span></span></code></pre></div><p><img loading="lazy" src="image-20230913224034493.png" alt="image-20230913224034493"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20230913224034493.png" alt="image-20230913224034493"  />
 </p>
 <p>web端单位：px是写死的单位大小</p>
 <p>移动端单位：是比例</p>
@@ -730,8 +759,15 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </p>
 <p><img loading="lazy" src="image-20230914110609928.png" alt="image-20230914110609928"  />
 </p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>flex-wrap:wrap  一行放不下了，必要时可以自动换行
-</span></span></code></pre></div><h4 id="5flexblejs布局">5、flexble.js布局<a hidden class="anchor" aria-hidden="true" href="#5flexblejs布局">#</a></h4>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>flex-wrap:wrap  一行放不下了，必要时可以自动换行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5flexblejs布局">5、flexble.js布局<a hidden class="anchor" aria-hidden="true" href="#5flexblejs布局">#</a></h4>
 <p><img loading="lazy" src="image-20230914151051872.png" alt="image-20230914151051872"  />
 </p>
 <p><img loading="lazy" src="image-20230914151853735.png" alt="image-20230914151853735"  />
@@ -749,14 +785,38 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 <p>效果图如下（可以看到在不同的分辨率下，依然可以保持较好的布局）：</p>
 <h4 id="3使用上述方案的步骤">（3）使用上述方案的步骤：<a hidden class="anchor" aria-hidden="true" href="#3使用上述方案的步骤">#</a></h4>
 <p>1、根据设计稿算出 px转化成rem 的缩放比（这里我的设计稿是 1920px，然后上面导航栏的字体大小为34px，所以都以这个为基准，算出缩放比为 56.47，然后反过来除就等于导航栏字体大小，其他的图片、文字、div都按照这个去算，不懂得自己动手敲一遍，然后使用px的地方用这个函数代替就好了，这里使用的是 scss）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ratio: 1920 / 56.47; // 缩放比   34
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ratio: 1920 / 56.47; // 缩放比   34
 </span></span><span style="display:flex;"><span> 
 </span></span><span style="display:flex;"><span>// 返回对应屏幕下的rem值
 </span></span><span style="display:flex;"><span>@function px2rem($px){
 </span></span><span style="display:flex;"><span>  @return $px / $ratio + rem
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>2、样式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）：
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2、样式</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>样式书写如下（ px2rem(70) 等于 1920px屏幕下的70px）：
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  .title {
 </span></span><span style="display:flex;"><span>    position: absolute;
@@ -764,8 +824,37 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </span></span><span style="display:flex;"><span>    color: $title-color;
 </span></span><span style="display:flex;"><span>    font-size: $font-size-title;
 </span></span><span style="display:flex;"><span>  }
-</span></span></code></pre></div><p>3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3、再在html页面加上如下js代码，监听resize事件，动态设置 rem 中 根字体的大小，那么使用rem的元素会根据 根字体 的大小变化而变化</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>script<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">获取当前设备的宽度，设置</span>rem的根字体大小
 </span></span><span style="display:flex;"><span>      let width <span style="color:#f92672">=</span> window<span style="color:#f92672">.</span>innerWidth
 </span></span><span style="display:flex;"><span>      width <span style="color:#f92672">=</span> width <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1200</span> <span style="color:#960050;background-color:#1e0010">?</span> <span style="color:#ae81ff">1200</span> : width
@@ -788,7 +877,9 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </span></span><span style="display:flex;"><span>        htmlObj<span style="color:#f92672">.</span>style<span style="color:#f92672">.</span>fontSize <span style="color:#f92672">=</span> width <span style="color:#f92672">/</span> <span style="color:#ae81ff">56.47</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;px&#39;</span>
 </span></span><span style="display:flex;"><span>      };
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>script<span style="color:#f92672">&gt;</span>
-</span></span></code></pre></div><p><img loading="lazy" src="image-20230914170949310.png" alt="image-20230914170949310"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20230914170949310.png" alt="image-20230914170949310"  />
 </p>
 <p><img loading="lazy" src="image-20230914170903959.png" alt="image-20230914170903959"  />
 </p>
@@ -796,7 +887,51 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </p>
 <p><img loading="lazy" src="image-20230914171053840.png" alt="image-20230914171053840"  />
 </p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>flexible代码
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>flexible代码
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span>DOCTYPE html<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span><span style="color:#f92672">&gt;</span>
@@ -836,7 +971,9 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>body<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>html<span style="color:#f92672">&gt;</span>
-</span></span></code></pre></div><p><img loading="lazy" src="image-20230914171257861.png" alt="image-20230914171257861"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20230914171257861.png" alt="image-20230914171257861"  />
 </p>
 <h2 id="二css">二、CSS<a hidden class="anchor" aria-hidden="true" href="#二css">#</a></h2>
 <h3 id="1padding四个值的顺序">1、padding四个值的顺序<a hidden class="anchor" aria-hidden="true" href="#1padding四个值的顺序">#</a></h3>
@@ -855,7 +992,22 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 <p><img loading="lazy" src="image-20231209171748178.png" alt="image-20231209171748178"  />
 </p>
 <p>结论：当移动的数是负数时，在Y轴方向上，相对原来的位置向上移动，在X轴方向上，相对原来的位置向左移动。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>实战代码，先改变了坐标轴原点，再写偏移位置
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>实战代码，先改变了坐标轴原点，再写偏移位置
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>top: 50%;
 </span></span><span style="display:flex;"><span>left: 50%;
@@ -866,28 +1018,55 @@ target-densitydpi：一个屏幕像素密度是由屏幕分辨率决定的，通
 </span></span><span style="display:flex;"><span>flex-wrap: wrap;
 </span></span><span style="display:flex;"><span>align-items: center;
 </span></span><span style="display:flex;"><span>justify-content: center;
-</span></span></code></pre></div><p><img loading="lazy" src="image-20231209172301038.png" alt="image-20231209172301038"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20231209172301038.png" alt="image-20231209172301038"  />
 </p>
 <h3 id="4css实现盒子水平居中垂直居中和水平垂直都居中">4、CSS实现盒子水平居中、垂直居中和水平垂直都居中<a hidden class="anchor" aria-hidden="true" href="#4css实现盒子水平居中垂直居中和水平垂直都居中">#</a></h3>
 <h3 id="5高级的边框样式">5、高级的边框样式<a hidden class="anchor" aria-hidden="true" href="#5高级的边框样式">#</a></h3>
 <h4 id="1颜色">（1）颜色<a hidden class="anchor" aria-hidden="true" href="#1颜色">#</a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>::v-deep .el-input__inner {
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>::v-deep .el-input__inner {
 </span></span><span style="display:flex;"><span>	  background-color: transparent !important;
 </span></span><span style="display:flex;"><span>	  border-color:#80ffff;
 </span></span><span style="display:flex;"><span>	  box-shadow: 1px 1px 5px 1px  RGB(128,255,255,0.8) inset;
 </span></span><span style="display:flex;"><span>	  height: 30px;
 </span></span><span style="display:flex;"><span>	}
-</span></span></code></pre></div><p><img loading="lazy" src="image-20231209173217867.png" alt="image-20231209173217867"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20231209173217867.png" alt="image-20231209173217867"  />
 </p>
 <h4 id="2box-sizing-border-box">（2）box-sizing: border-box;<a hidden class="anchor" aria-hidden="true" href="#2box-sizing-border-box">#</a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>解决CSS中padding（内边距）margin（外边距）撑大盒子的问题
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>解决CSS中padding（内边距）margin（外边距）撑大盒子的问题
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>拓展
 </span></span><span style="display:flex;"><span>box-sizing: content-box（为内容的宽高）（实际上,还有padding+边框+margin撑大盒子）
 </span></span><span style="display:flex;"><span>			|border-box（为内容+padding+边框的总宽高）
 </span></span><span style="display:flex;"><span>			|inherit（从父元素继承 box-sizing 属性）;
-</span></span></code></pre></div><p><img loading="lazy" src="image-20231209174426608.png" alt="image-20231209174426608"  />
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="image-20231209174426608.png" alt="image-20231209174426608"  />
 </p>
 <p><img loading="lazy" src="image-20231209174930002.png" alt="image-20231209174930002"  />
 </p>
